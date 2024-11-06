@@ -1,0 +1,37 @@
+global-styling:
+  version: VERSION
+  css:
+    theme:
+      assets/css/bootstrap.min.css: {}
+      assets/css/font-awesome.min.css: {}
+      assets/css/themify-icons.css: {}
+      assets/css/flaticon-set.css: {}
+      assets/css/magnific-popup.css: {}
+      assets/css/owl.carousel.min.css: {}
+      assets/css/owl.theme.default.min.css: {}
+      assets/css/animate.css: {}
+      assets/css/bootsnav.css: {}
+      assets/css/style.css: {}
+      assets/css/responsive.css: {}
+  js:
+    assets/js/jquery-1.12.4.min.js: {}
+    assets/js/popper.min.js: {}
+    assets/js/bootstrap.min.js: {}
+    assets/js/equal-height.min.js: {}
+    assets/js/jquery.appear.js: {}
+    assets/js/jquery.easing.min.js: {}
+    assets/js/jquery.magnific-popup.min.js: {}
+    assets/js/modernizr.custom.13711.js: {}
+    assets/js/owl.carousel.min.js: {}
+    assets/js/wow.min.js: {}
+    assets/js/progress-bar.min.js: {}
+    assets/js/isotope.pkgd.min.js: {}
+    assets/js/imagesloaded.pkgd.min.js: {}
+    assets/js/count-to.js: {}
+    assets/js/YTPlayer.min.js: {}
+    assets/js/jquery.nice-select.min.js: {}
+    assets/js/bootsnav.js: {}
+    assets/js/main.js: {}
+
+    assets/js/bootstrap.bundle.min.js: {}
+    assets/js/custom.js: {}

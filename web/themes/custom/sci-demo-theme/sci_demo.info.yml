@@ -1,0 +1,16 @@
+# File: sci_demo.info.yml
+name: "SCI DEMO"
+type: theme
+description: "SCI DEMO theme for future Drupal Development"
+core_version_requirement: ^8 || ^9 || ^10
+package: Custom
+base theme: false
+libraries:
+  - sci_demo/global-styling
+regions:
+  header: "Header"
+  banner: "Banner"
+  slider: "Slider"
+  sidebar: "Sidebar"
+  content: "Content"
+  footer: "Footer"
