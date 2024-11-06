@@ -8,35 +8,30 @@ Install `Drupal`:
 
 ```
 composer create-project drupal/recommended-project:10.* project_name
-
 ```
 
 Install `Drush`:
 
 ```
 composer require drush/drush
-
 ```
 
 Install `Devel`:
 
 ```
 composer require drupal/devel:^5.2
-
 ```
 
 Install `Admin Toolbar`:
 
 ```
 composer require drupal/admin_toolbar:^3.4
-
 ```
 
 Install `Pathauto`:
 
 ```
 composer require drupal/pathauto:^1.13
-
 ```
 
 - Install `Devel`, `Admin Toolbar`, `Pathauto` from route: `/admin/modules`
