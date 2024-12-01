@@ -11,7 +11,7 @@ Main Color   : #3bcf93
 -------------------------------------
 
 Table of contents
-        
+
     01. Template default css
     02. Navbar
         - Navbar Default
@@ -86,11 +86,18 @@ body {
   color: #666666;
 }
 
-html, body, .wrapper {
+html,
+body,
+.wrapper {
   height: 100%;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: #232323;
   font-weight: normal;
   line-height: 1.2;
@@ -99,7 +106,12 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin-bottom: 15px;
 }
 
@@ -116,7 +128,9 @@ label {
   max-width: 100%;
 }
 
-a, .btn, button {
+a,
+.btn,
+button {
   transition: all 0.35s ease-in-out;
   -webkit-transition: all 0.35s ease-in-out;
   -moz-transition: all 0.35s ease-in-out;
@@ -125,7 +139,8 @@ a, .btn, button {
   outline: medium none;
 }
 
-a img, iframe {
+a img,
+iframe {
   border: none;
 }
 
@@ -157,8 +172,9 @@ pre {
   line-height: 1.42857143;
 }
 
-input:focus, textarea:focus, 
- select:focus {
+input:focus,
+textarea:focus,
+select:focus {
   outline: none;
   box-shadow: inherit;
 }
@@ -168,7 +184,10 @@ ul {
   list-style-type: none;
 }
 
-a, a:active, a:focus, a:hover {
+a,
+a:active,
+a:focus,
+a:hover {
   outline: none;
   text-decoration: none;
   color: #232323;
@@ -189,19 +208,21 @@ a {
   font-weight: 700;
 }
 
-b, strong {
+b,
+strong {
   font-weight: 900;
 }
 
-.btn.active, .btn:active {
+.btn.active,
+.btn:active {
   background-image: inherit !important;
 }
 
-.btn.focus, 
- .btn:active:focus, 
- .btn:active:hover, 
- .btn:focus, 
- .btn:hover {
+.btn.focus,
+.btn:active:focus,
+.btn:active:hover,
+.btn:focus,
+.btn:hover {
   outline: 0;
 }
 
@@ -211,7 +232,8 @@ b, strong {
   border-radius: 40px;
 }
 
-.btn.active, .btn:active {
+.btn.active,
+.btn:active {
   outline: 0;
   -webkit-box-shadow: inherit;
   box-shadow: inherit;
@@ -223,6 +245,7 @@ input {
   box-shadow: inherit;
   min-height: 50px;
 }
+
 /* Default CSS */
 .container-medium {
   padding: 0 15px;
@@ -349,11 +372,11 @@ input {
 }
 
 .bg-light-gradient {
-  background: linear-gradient(90deg, rgba(244,247,252,1) 36%, rgba(255,255,255,1) 100%);
+  background: linear-gradient(90deg, rgba(244, 247, 252, 1) 36%, rgba(255, 255, 255, 1) 100%);
 }
 
 .gradient-bg {
-  background-image: linear-gradient(90deg, rgba(2,59,166,1) 0%, rgba(67,126,235,1) 100%);
+  background-image: linear-gradient(90deg, rgba(2, 59, 166, 1) 0%, rgba(67, 126, 235, 1) 100%);
   background-color: #3bcf93;
 }
 
@@ -367,14 +390,14 @@ input {
   font-style: italic;
 }
 
-.text-light h1, 
- .text-light h2, 
- .text-light h3, 
- .text-light h4, 
- .text-light h5, 
- .text-light h6, 
- .text-light p, 
- .text-light a {
+.text-light h1,
+.text-light h2,
+.text-light h3,
+.text-light h4,
+.text-light h5,
+.text-light h6,
+.text-light p,
+.text-light a {
   color: #ffffff;
 }
 
@@ -432,7 +455,7 @@ input {
 }
 
 .hibiscus .shadow.theme::after {
-    background: #bf3654;
+  background: #bf3654;
 }
 
 .shadow.theme-hard::after {
@@ -543,8 +566,8 @@ input {
   border: 2px solid #ffffff;
 }
 
-.btn.btn-sm-pro.btn-border-light:hover, 
- .btn.btn-sm-pro.btn-border-light:focus {
+.btn.btn-sm-pro.btn-border-light:hover,
+.btn.btn-sm-pro.btn-border-light:focus {
   background-color: #ffffff;
   color: #232323;
   border: 2px solid #ffffff;
@@ -663,8 +686,8 @@ input {
 }
 
 
-.btn-dark:hover, 
- .btn-dark:focus {
+.btn-dark:hover,
+.btn-dark:focus {
   color: #232323 !important;
   background: transparent;
 }
@@ -724,14 +747,14 @@ input {
   border: 2px solid #bf3654;
 }
 
-.btn-theme.effect:hover, 
+.btn-theme.effect:hover,
 .btn-theme.effect:focus {
   background: #3bcf93 none repeat scroll 0 0;
   border: 2px solid #3bcf93;
   color: #ffffff;
 }
 
-.hibiscus .btn-theme.effect:hover, 
+.hibiscus .btn-theme.effect:hover,
 .hibiscus .btn-theme.effect:focus {
   background: #bf3654 none repeat scroll 0 0;
   border: 2px solid #bf3654;
@@ -770,14 +793,14 @@ input {
   content: "";
   height: 100%;
   width: 100%;
-  background: linear-gradient(90deg, rgba(59,207,147,1) 0%, rgba(15,148,94,1) 100%);
+  background: linear-gradient(90deg, rgba(59, 207, 147, 1) 0%, rgba(15, 148, 94, 1) 100%);
   transition: all 0.35s ease-in-out;
   z-index: -1;
   box-shadow: 0 0 10px rgba(255, 136, 0, 0.5), inset 0 0 1px 1px #3bcf93;
 }
 
 .hibiscus .btn-gradient::after {
-  background: linear-gradient(90deg, rgba(191,54,84,1) 0%, rgba(124,6,32,1) 100%);
+  background: linear-gradient(90deg, rgba(191, 54, 84, 1) 0%, rgba(124, 6, 32, 1) 100%);
   box-shadow: 0 0 10px rgba(255, 136, 0, 0.5), inset 0 0 1px 1px #bf3654;
 }
 
@@ -856,7 +879,8 @@ input {
   overflow: hidden;
 }
 
-button, button:focus {
+button,
+button:focus {
   border: none !important;
   box-shadow: inherit !important;
   outline: inherit !important;
@@ -928,9 +952,9 @@ nav.bootsnav.navbar-default.info-topbar.active-full ul li a {
   padding: 35px 20px;
 }
 
-.attr-nav > a.btn-theme.effect:hover, 
-.attr-nav > a.btn-theme.effect, 
-.attr-nav > a.btn-theme.effect:focus {
+.attr-nav>a.btn-theme.effect:hover,
+.attr-nav>a.btn-theme.effect,
+.attr-nav>a.btn-theme.effect:focus {
   background: #3bcf93 none repeat scroll 0 0;
   border: 2px solid #3bcf93;
   color: #ffffff !important;
@@ -1119,8 +1143,8 @@ h2.text-blur {
   }
 }
 
-/* ============================================================== 
-     # Top Bar 
+/* ==============================================================
+     # Top Bar
 =================================================================== */
 .language-switcher .dropdown-toggle {
   background: transparent;
@@ -1186,8 +1210,8 @@ h2.text-blur {
 }
 
 
-/* ============================================================== 
-     # Top Bar 
+/* ==============================================================
+     # Top Bar
 =================================================================== */
 
 .top-bar-area.inc-border {
@@ -1304,7 +1328,7 @@ h2.text-blur {
   text-align: left;
 }
 
-.top-bar-area .address-info li .icon, 
+.top-bar-area .address-info li .icon,
 .top-bar-area .address-info li .info {
   display: inline-block;
 }
@@ -1322,8 +1346,8 @@ h2.text-blur {
 }
 
 
-/* ============================================================== 
-     # Bradcrumb 
+/* ==============================================================
+     # Bradcrumb
 =================================================================== */
 
 .breadcrumb-area .breadcrumb-items {
@@ -1366,8 +1390,8 @@ h2.text-blur {
   font-size: 40px;
 }
 
-.breadcrumb-area .breadcrumb a, 
- .breadcrumb-area .breadcrumb li {
+.breadcrumb-area .breadcrumb a,
+.breadcrumb-area .breadcrumb li {
   font-weight: 600;
   text-transform: uppercase;
   display: inline-block;
@@ -1382,7 +1406,7 @@ h2.text-blur {
 }
 
 
-.breadcrumb > li + li::before {
+.breadcrumb>li+li::before {
   bottom: 3px;
   color: #ffffff;
   content: ". ";
@@ -1393,16 +1417,16 @@ h2.text-blur {
 
 
 
-/* ============================================================== 
-     # Banner 
+/* ==============================================================
+     # Banner
 =================================================================== */
-body, 
-.banner-area, 
+body,
+.banner-area,
 .banner-area div {
-  height: 100%;
+  height: 600px;
 }
 
-.banner-area.auto-height, 
+.banner-area.auto-height,
 .banner-area.auto-height div {
   height: auto;
 }
@@ -1422,8 +1446,8 @@ body,
   width: 100%;
 }
 
-.banner-area .box-cell, 
- .banner-area .box-cell div {
+.banner-area .box-cell,
+.banner-area .box-cell div {
   height: auto;
 }
 
@@ -1506,30 +1530,30 @@ body,
 }
 
 /* Animation delays */
-.banner-area .item h1:first-child, 
- .banner-area .item h2:first-child, 
- .banner-area .item h3:first-child, 
- .banner-area .item h4:first-child, 
- .banner-area .item h5:first-child, 
- .banner-area .item h6:first-child {
+.banner-area .item h1:first-child,
+.banner-area .item h2:first-child,
+.banner-area .item h3:first-child,
+.banner-area .item h4:first-child,
+.banner-area .item h5:first-child,
+.banner-area .item h6:first-child {
   animation-delay: .5s;
 }
 
-.banner-area .item h1:nth-child(2), 
- .banner-area .item h2:nth-child(2), 
- .banner-area .item h3:nth-child(2), 
- .banner-area .item h4:nth-child(2), 
- .banner-area .item h5:nth-child(2), 
- .banner-area .item h6:nth-child(2) {
+.banner-area .item h1:nth-child(2),
+.banner-area .item h2:nth-child(2),
+.banner-area .item h3:nth-child(2),
+.banner-area .item h4:nth-child(2),
+.banner-area .item h5:nth-child(2),
+.banner-area .item h6:nth-child(2) {
   animation-delay: .7s;
 }
 
-.carousel-caption h1:nth-child(3), 
- .carousel-caption h2:nth-child(3), 
- .carousel-caption h3:nth-child(3), 
- .carousel-caption h4:nth-child(3), 
- .carousel-caption h5:nth-child(3), 
- .carousel-caption h6:nth-child(3) {
+.carousel-caption h1:nth-child(3),
+.carousel-caption h2:nth-child(3),
+.carousel-caption h3:nth-child(3),
+.carousel-caption h4:nth-child(3),
+.carousel-caption h5:nth-child(3),
+.carousel-caption h6:nth-child(3) {
   animation-delay: .9s;
 }
 
@@ -1541,8 +1565,8 @@ body,
   animation-delay: .6s;
 }
 
-.banner-area .item a, 
- .banner-area .item button {
+.banner-area .item a,
+.banner-area .item button {
   animation-delay: .7s;
 }
 
@@ -1552,22 +1576,22 @@ body,
   transition-property: opacity;
 }
 
-.carousel-fade .carousel-inner .item, 
- .carousel-fade .carousel-inner .active.left, 
- .carousel-fade .carousel-inner .active.right {
+.carousel-fade .carousel-inner .item,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
   opacity: 0;
 }
 
-.carousel-fade .carousel-inner .active, 
- .carousel-fade .carousel-inner .next.left, 
- .carousel-fade .carousel-inner .prev.right {
+.carousel-fade .carousel-inner .active,
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
   opacity: 1;
 }
 
-.carousel-fade .carousel-inner .next, 
- .carousel-fade .carousel-inner .prev, 
- .carousel-fade .carousel-inner .active.left, 
- .carousel-fade .carousel-inner .active.right {
+.carousel-fade .carousel-inner .next,
+.carousel-fade .carousel-inner .prev,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
   left: 0;
   -webkit-transform: translate3d(0, 0, 0);
   -moz-transform: translate3d(0, 0, 0);
@@ -1578,6 +1602,7 @@ body,
 .carousel-fade .carousel-control {
   z-index: 2;
 }
+
 /* Slider Zoom Effect */
 @-webkit-keyframes zoom {
   from {
@@ -1619,7 +1644,7 @@ body,
   }
 }
 
-.carousel-inner .item > .slider-thumb {
+.carousel-inner .item>.slider-thumb {
   -webkit-animation: zoom 20s;
   animation: zoom 20s;
 }
@@ -1776,7 +1801,7 @@ body,
   z-index: 1 !important;
 }
 
-.double-items > .row div {
+.double-items>.row div {
   height: auto;
 }
 
@@ -1844,24 +1869,22 @@ body,
 }
 
 .hibiscus .banner-area .content span {
-    color: #bf3654;
+  color: #bf3654;
 }
 
-.breadcrumb-area .breadcrumb li.active
-
-.banner-area.top-pad-80 .content {
+.breadcrumb-area .breadcrumb li.active .banner-area.top-pad-80 .content {
   padding-top: 80px;
 }
 
 .banner-area .content h3 {
-    display: inline-block;
-    position: relative;
-    z-index: 1;
-    margin-bottom: 20px;
-    padding: 25px;
-    color: #bf3654;
-    font-weight: 600;
-    font-size: 24px;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 20px;
+  padding: 25px;
+  color: #bf3654;
+  font-weight: 600;
+  font-size: 24px;
 }
 
 .banner-area .content h3::after {
@@ -1963,7 +1986,7 @@ body,
 }
 
 
-/* ============================================================== 
+/* ==============================================================
      # Video Button Play
 =================================================================== */
 .video-play-button {
@@ -1982,7 +2005,7 @@ body,
 }
 
 .hibiscus .video-play-button {
-    color: #bf3654;
+  color: #bf3654;
 }
 
 .video-play-button:before {
@@ -2011,7 +2034,7 @@ body,
 
 .hibiscus .video-play-button.theme:before,
 .hibiscus .video-play-button.theme:after {
-    background: #bf3654;
+  background: #bf3654;
 }
 
 .orange .video-play-button.theme:before,
@@ -2077,7 +2100,7 @@ body,
 }
 
 .hibiscus .video-play-button i {
-    color: #bf3654;
+  color: #bf3654;
 }
 
 .video-play-button.theme i {
@@ -2097,7 +2120,7 @@ body,
   margin-left: 10px;
 }
 
-.video-play-button.relative::before, 
+.video-play-button.relative::before,
 .video-play-button.relative::after {
   height: 68px;
   width: 68px;
@@ -2144,8 +2167,8 @@ body,
   border-color: #dbdbdb;
 }
 
-.nice-select:active, 
-.nice-select.open, 
+.nice-select:active,
+.nice-select.open,
 .nice-select:focus {
   border-color: #999;
 }
@@ -2280,8 +2303,8 @@ body,
   margin: 0;
 }
 
-.nice-select .option:hover, 
-.nice-select .option.focus, 
+.nice-select .option:hover,
+.nice-select .option.focus,
 .nice-select .option.selected.focus {
   background-color: #f6f6f6;
 }
@@ -2304,7 +2327,7 @@ body,
   display: block;
 }
 
-/* ============================================================== 
+/* ==============================================================
      # About
 =================================================================== */
 .about-area .info ul li {
@@ -2322,15 +2345,15 @@ body,
   font-weight: 800;
 }
 
-.about-area .info > h5 {
+.about-area .info>h5 {
   color: #3bcf93;
   text-transform: uppercase;
   font-weight: 800;
   margin-bottom: 25px;
 }
 
-.hibiscus .about-area .info > h5 {
-    color: #bf3654;
+.hibiscus .about-area .info>h5 {
+  color: #bf3654;
 }
 
 .about-area .info h2 {
@@ -2360,7 +2383,7 @@ body,
 }
 
 .hibiscus .about-area .thumb .overlay {
-    background: #bf3654;
+  background: #bf3654;
 }
 
 .about-area .thumb .overlay h4 {
@@ -2369,7 +2392,7 @@ body,
   font-weight: 700;
 }
 
-/* ============================================================== 
+/* ==============================================================
      # Target Area
 =================================================================== */
 
@@ -2402,7 +2425,7 @@ body,
 }
 
 .hibiscus .target-area .thumb .content a {
-    color: #bf3654;
+  color: #bf3654;
 }
 
 .target-area .thumb .content a::after {
@@ -2416,7 +2439,7 @@ body,
 }
 
 .hibiscus .target-area .thumb .content a::after {
-    background: #bf3654;
+  background: #bf3654;
 }
 
 .target-area .tab-items {
@@ -2451,8 +2474,8 @@ body,
 }
 
 .hibiscus .target-area .tab-items .nav-tabs li a.active {
-    color: #bf3654;
-    border-color: #bf3654;
+  color: #bf3654;
+  border-color: #bf3654;
 }
 
 .target-area .tab-items .nav-tabs li a.active::after {
@@ -2467,7 +2490,7 @@ body,
 }
 
 .hibiscus .target-area .tab-items .nav-tabs li a.active::after {
-    background: #bf3654;
+  background: #bf3654;
 }
 
 .target-area .tab-items .info ul li {
@@ -2520,11 +2543,11 @@ body,
 }
 
 .hibiscus .target-area .tab-items .progress-box .progress .progress-bar {
-    background: #bf3654;
+  background: #bf3654;
 }
 
 
-/* ============================================================== 
+/* ==============================================================
      # Wide Causes Area
 =================================================================== */
 
@@ -2533,8 +2556,8 @@ body,
 }
 
 .wide-causes-area.causes-area.bg-gray .item {
-    background: #f3f7fd;
-    box-shadow: inherit;
+  background: #f3f7fd;
+  box-shadow: inherit;
 }
 
 .wide-causes-area.causes-area .causes-items .info {
@@ -2565,7 +2588,7 @@ body,
 }
 
 .hibiscus .wide-causes-area .info .top-entry i {
-    color: #bf3654;
+  color: #bf3654;
 }
 
 .wide-causes-area .info .top-entry i.i.fas.fa-clock {
@@ -2585,7 +2608,7 @@ body,
 }
 
 .hibiscus .wide-causes-area .info .progress .progress-bar {
-    background: #bf3654;
+  background: #bf3654;
 }
 
 .wide-causes-area .info .progress-box p {
@@ -2595,33 +2618,33 @@ body,
 }
 
 .wide-causes-area .info .progress-box .progress span {
-    position: absolute;
-    right: -22px;
-    top: -43px;
-    background: #3bcf93;
-    display: inline-block;
-    padding: 0px 10px;
-    border-radius: 5px;
-    font-weight: 800;
+  position: absolute;
+  right: -22px;
+  top: -43px;
+  background: #3bcf93;
+  display: inline-block;
+  padding: 0px 10px;
+  border-radius: 5px;
+  font-weight: 800;
 }
 
 .hibiscus .wide-causes-area .info .progress-box .progress span {
-    background: #bf3654;
+  background: #bf3654;
 }
 
 .wide-causes-area .info .progress-box .progress span::after {
-    position: absolute;
-    left: 50%;
-    bottom: -5px;
-    content: "";
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-top: 5px solid #3bcf93;
-    margin-left: -5px;
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  content: "";
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #3bcf93;
+  margin-left: -5px;
 }
 
 .hibiscus .wide-causes-area .info .progress-box .progress span::after {
-    border-top: 5px solid #bf3654;
+  border-top: 5px solid #bf3654;
 }
 
 .wide-causes-area .info a {
@@ -2680,7 +2703,7 @@ body,
   margin-left: -40px;
 }
 
-.wide-causes-area .carouses-items.wide-causes-carousel .owl-nav .owl-prev, 
+.wide-causes-area .carouses-items.wide-causes-carousel .owl-nav .owl-prev,
 .wide-causes-area .carouses-items.wide-causes-carousel .owl-nav .owl-next {
   line-height: initial;
   background: transparent;
@@ -2723,7 +2746,7 @@ ul.pagination {
 }
 
 .hibiscus .pagination li a {
-    color: #bf3654;
+  color: #bf3654;
 }
 
 .pagination li.page-item.active a {
@@ -2736,7 +2759,7 @@ ul.pagination {
   border-color: #bf3654;
 }
 
-/* ============================================================== 
+/* ==============================================================
      # Stay Us Area
 =================================================================== */
 
@@ -2764,7 +2787,7 @@ ul.pagination {
 }
 
 .hibiscus .stay-us-area .single-item:nth-child(2n) .item {
-    background: #bf3654;
+  background: #bf3654;
 }
 
 .stay-us-area .single-item:nth-child(2n) .item h4 a,
@@ -2772,7 +2795,7 @@ ul.pagination {
   color: #ffffff;
 }
 
-.stay-us-area .item > i {
+.stay-us-area .item>i {
   display: inline-block;
   font-size: 60px;
   margin-bottom: 30px;
@@ -2781,11 +2804,11 @@ ul.pagination {
   z-index: 1;
 }
 
-.hibiscus .stay-us-area .item > i {
-    color: #bf3654;
+.hibiscus .stay-us-area .item>i {
+  color: #bf3654;
 }
 
-.stay-us-area .item > i::after {
+.stay-us-area .item>i::after {
   position: absolute;
   left: 0;
   top: -25px;
@@ -2798,11 +2821,11 @@ ul.pagination {
   border-radius: 50%;
 }
 
-.hibiscus .stay-us-area .item > i::after {
-    background: #bf3654;
+.hibiscus .stay-us-area .item>i::after {
+  background: #bf3654;
 }
 
-.stay-us-area .single-item:nth-child(2n) .item > i::after {
+.stay-us-area .single-item:nth-child(2n) .item>i::after {
   background: #ffffff;
 }
 
@@ -2810,11 +2833,11 @@ ul.pagination {
   margin: 0;
 }
 
-.stay-us-area .single-item:nth-child(2n) .item > i {
+.stay-us-area .single-item:nth-child(2n) .item>i {
   color: #ffffff;
 }
 
-.stay-us-area .item > a {
+.stay-us-area .item>a {
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -2833,20 +2856,19 @@ ul.pagination {
   border: 3px solid #ffffff;
 }
 
-.hibiscus .stay-us-area .item > a {
-    background: #bf3654;
+.hibiscus .stay-us-area .item>a {
+  background: #bf3654;
 }
 
-.stay-us-area .item:hover > a {
+.stay-us-area .item:hover>a {
   opacity: 1;
   bottom: -25px;
 }
 
-.stay-us-area .item > a i {
-}
+.stay-us-area .item>a i {}
 
-/* ============================================================== 
-     # Recent Causes 
+/* ==============================================================
+     # Recent Causes
 =================================================================== */
 
 @media only screen and (min-width: 1367px) {
@@ -2875,11 +2897,11 @@ ul.pagination {
 }
 
 
-/* ============================================================== 
-     # Popular Causes 
+/* ==============================================================
+     # Popular Causes
 =================================================================== */
 
-.popular-causes > h4 {
+.popular-causes>h4 {
   margin-bottom: 40px;
   font-weight: 700;
   display: inline-block;
@@ -2888,25 +2910,25 @@ ul.pagination {
   padding-right: 15px;
 }
 
-.popular-causes .causes-box > h4 {
+.popular-causes .causes-box>h4 {
   font-weight: 800;
   margin-bottom: 40px;
 }
 
-.popular-causes > h4::before {
+.popular-causes>h4::before {
   position: absolute;
   left: -50px;
   top: -60px;
   content: "";
   height: 100px;
   width: 100px;
-  background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(59,207,147,1) 100%);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(59, 207, 147, 1) 100%);
   z-index: -1;
   border-radius: 50%;
   opacity: 0.1;
 }
 
-.popular-causes > h4 i {
+.popular-causes>h4 i {
   margin-right: 5px;
 }
 
@@ -2943,7 +2965,7 @@ ul.pagination {
 }
 
 .hibiscus .popular-causes .cats {
-    background: #bf3654;
+  background: #bf3654;
 }
 
 .popular-causes .item:nth-child(2n) .cats {
@@ -2967,7 +2989,7 @@ ul.pagination {
 }
 
 .hibiscus .popular-causes .progress-box .progress .progress-bar {
-    background: #bf3654;
+  background: #bf3654;
 }
 
 .popular-causes .progress-box .progress-bar::after {
@@ -2981,7 +3003,7 @@ ul.pagination {
 }
 
 .hibiscus .popular-causes .progress-box .progress-bar::after {
-    background: #bf3654;
+  background: #bf3654;
 }
 
 .popular-causes .progress-box p {
@@ -2999,23 +3021,23 @@ ul.pagination {
   font-size: 20px;
 }
 
-.popular-causes .causes-box > h4 i {
+.popular-causes .causes-box>h4 i {
   color: #3bcf93;
   margin-right: 5px;
 }
 
-.hibiscus .popular-causes .causes-box > h4 i{
-    color: #bf3654;
+.hibiscus .popular-causes .causes-box>h4 i {
+  color: #bf3654;
 }
 
-.popular-causes .progress-box > span {
+.popular-causes .progress-box>span {
   font-weight: 700;
   margin-top: 10px;
   display: inline-block;
 }
 
-/* ============================================================== 
-     # We Do Area 
+/* ==============================================================
+     # We Do Area
 =================================================================== */
 
 .we-do-area.half-bg {
@@ -3046,17 +3068,17 @@ ul.pagination {
 }
 
 .we-do-area .item i {
-    display: inline-block;
-    font-size: 60px;
-    margin-bottom: 30px;
-    color: #3bcf93;
-    position: relative;
-    z-index: 1;
-    padding: 10px;
+  display: inline-block;
+  font-size: 60px;
+  margin-bottom: 30px;
+  color: #3bcf93;
+  position: relative;
+  z-index: 1;
+  padding: 10px;
 }
 
 .hibiscus .we-do-area .item i {
-    color: #bf3654;
+  color: #bf3654;
 }
 
 .we-do-area .item i::after {
@@ -3124,8 +3146,8 @@ ul.pagination {
 }
 
 
-/* ============================================================== 
-     # Our Mission 
+/* ==============================================================
+     # Our Mission
 =================================================================== */
 .mission-area.half-bg {
   position: relative;
@@ -3162,7 +3184,7 @@ ul.pagination {
 }
 
 .hibiscus .mission-area .info h5 {
-    color: #bf3654;
+  color: #bf3654;
 }
 
 .mission-area .info h2 {
@@ -3196,7 +3218,7 @@ ul.pagination {
 }
 
 .hibiscus .mission-area ul li::after {
-    color: #bf3654;
+  color: #bf3654;
 }
 
 .mission-area .thumb {
@@ -3216,8 +3238,8 @@ ul.pagination {
   max-width: 60%;
 }
 
-/* ============================================================== 
-     # Causes Area 
+/* ==============================================================
+     # Causes Area
 =================================================================== */
 
 .causes-area .causes-items .single-item {
@@ -3239,9 +3261,9 @@ ul.pagination {
 }
 
 .causes-area .causes-items .progress {
-    height: 5px;
-    overflow: inherit;
-    margin-top: 60px;
+  height: 5px;
+  overflow: inherit;
+  margin-top: 60px;
 }
 
 .causes-area .causes-items .progress .progress-bar {
@@ -3252,37 +3274,37 @@ ul.pagination {
 }
 
 .hibiscus .causes-area .causes-items .progress .progress-bar {
-    background: #bf3654;
+  background: #bf3654;
 }
 
 .causes-area .causes-items .progress .progress-bar span {
-    position: absolute;
-    right: -22px;
-    top: -43px;
-    background: #3bcf93;
-    display: inline-block;
-    padding: 0px 10px;
-    border-radius: 5px;
-    font-weight: 800;
+  position: absolute;
+  right: -22px;
+  top: -43px;
+  background: #3bcf93;
+  display: inline-block;
+  padding: 0px 10px;
+  border-radius: 5px;
+  font-weight: 800;
 }
 
 .hibiscus .causes-area .causes-items .progress .progress-bar span {
-    background: #bf3654;
+  background: #bf3654;
 }
 
 .causes-area .causes-items .progress .progress-bar span::after {
-    position: absolute;
-    left: 50%;
-    bottom: -5px;
-    content: "";
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-top: 5px solid #3bcf93;
-    margin-left: -5px;
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  content: "";
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #3bcf93;
+  margin-left: -5px;
 }
 
 .hibiscus .causes-area .causes-items .progress .progress-bar span::after {
-    border-top: 5px solid #bf3654;
+  border-top: 5px solid #bf3654;
 }
 
 .causes-area .causes-items .progress-box p {
@@ -3293,12 +3315,12 @@ ul.pagination {
 }
 
 .causes-area .causes-items .progress-box p span {
-    border-left: 1px solid #cccccc;
-    margin-left: 10px;
-    padding-left: 15px;
+  border-left: 1px solid #cccccc;
+  margin-left: 10px;
+  padding-left: 15px;
 }
 
-.causes-area .causes-items .progress-box > span {
+.causes-area .causes-items .progress-box>span {
   font-weight: 700;
   margin-bottom: 10px;
   display: inline-block;
@@ -3314,8 +3336,7 @@ ul.pagination {
   margin-bottom: 15px;
 }
 
-.causes-area .causes-items .info ul li strong {
-}
+.causes-area .causes-items .info ul li strong {}
 
 .causes-area .causes-items .info h4 {
   font-size: 20px;
@@ -3417,8 +3438,8 @@ ul.pagination {
   background: #bf3654;
 }
 
-/* ============================================================== 
-     # Causes grid 
+/* ==============================================================
+     # Causes grid
 =================================================================== */
 
 .causes-area .grid-item {
@@ -3450,7 +3471,7 @@ ul.pagination {
 }
 
 .hibiscus .causes-area .grid-item .thumb .cats {
-    background: #bf3654;
+  background: #bf3654;
 }
 
 .causes-area .info .top-entry {
@@ -3465,8 +3486,8 @@ ul.pagination {
   color: #3bcf93;
 }
 
-.hibiscus .causes-area .info .top-entry  {
-    color: #bf3654;
+.hibiscus .causes-area .info .top-entry {
+  color: #bf3654;
 }
 
 .causes-area .info .top-entry i.i.fas.fa-clock {
@@ -3482,8 +3503,8 @@ ul.pagination {
 }
 
 
-/* ============================================================== 
-     # Causes Single 
+/* ==============================================================
+     # Causes Single
 =================================================================== */
 .causes-single-area .sidebar aside {
   padding: 30px;
@@ -3516,7 +3537,7 @@ ul.pagination {
 }
 
 .hibiscus .causes-single-items .progress-box .progress .progress-bar {
-    background: #bf3654;
+  background: #bf3654;
 }
 
 .causes-single-items .progress-box .progress-bar::after {
@@ -3530,7 +3551,7 @@ ul.pagination {
 }
 
 .hibiscus .causes-single-items .progress-box .progress-bar::after {
-    background: #bf3654;
+  background: #bf3654;
 }
 
 .causes-single-items .progress-box p {
@@ -3538,7 +3559,7 @@ ul.pagination {
   margin-bottom: 10px;
 }
 
-.causes-single-items .progress-box > span {
+.causes-single-items .progress-box>span {
   font-weight: 700;
   margin-top: 10px;
   display: inline-block;
@@ -3549,7 +3570,7 @@ ul.pagination {
   margin-bottom: 25px;
 }
 
-.causes-single-items .item  ul li {
+.causes-single-items .item ul li {
   display: inline-block;
   margin-right: 10px;
   margin-top: 10px;
@@ -3573,7 +3594,7 @@ ul.pagination {
 }
 
 .hibiscus .causes-single-items .item ul li button.active {
-    background: #bf3654;
+  background: #bf3654;
 }
 
 .causes-single-items aside .item form input {
@@ -3583,7 +3604,7 @@ ul.pagination {
   text-align: center;
 }
 
-.causes-single-items aside .item form > button {
+.causes-single-items aside .item form>button {
   width: 100%;
   background: transparent;
   border: 2px solid #3bcf93 !important;
@@ -3593,18 +3614,18 @@ ul.pagination {
   font-weight: 700;
 }
 
-.hibiscus .causes-single-items aside .item form > button {
-    border: 2px solid #bf3654 !important;
+.hibiscus .causes-single-items aside .item form>button {
+  border: 2px solid #bf3654 !important;
 }
 
-.causes-single-items aside .item > a {
+.causes-single-items aside .item>a {
   color: #3bcf93;
   text-transform: uppercase;
   font-weight: 800;
 }
 
-.hibiscus .causes-single-items aside .item > a {
-    color: #bf3654;
+.hibiscus .causes-single-items aside .item>a {
+  color: #bf3654;
 }
 
 .causes-single-items aside .item .donator {
@@ -3620,7 +3641,7 @@ ul.pagination {
   padding-bottom: 0;
 }
 
-.causes-single-items aside .item .donator .thumb  img {
+.causes-single-items aside .item .donator .thumb img {
   max-width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -3660,7 +3681,7 @@ ul.pagination {
 }
 
 .hibiscus .causes-single-items .content .top-entry i {
-    color: #bf3654;
+  color: #bf3654;
 }
 
 .causes-single-items .content .top-entry i.i.fas.fa-clock {
@@ -3719,7 +3740,7 @@ ul.pagination {
   margin-bottom: 0;
 }
 
-.causes-single-items .content .comments-area .comments-title > h4 {
+.causes-single-items .content .comments-area .comments-title>h4 {
   margin-bottom: 30px;
 }
 
@@ -3744,10 +3765,10 @@ ul.pagination {
 }
 
 .hibiscus .causes-single-items .content .commen-item .content .title i {
-    color: #bf3654;
+  color: #bf3654;
 }
 
-.causes-single-items .comments-area .comments-form .title > h4 {
+.causes-single-items .comments-area .comments-form .title>h4 {
   margin-bottom: 30px;
 }
 
@@ -3755,7 +3776,7 @@ ul.pagination {
   margin-top: 50px;
 }
 
-.causes-single-items .comments-area .comments-form input, 
+.causes-single-items .comments-area .comments-form input,
 .causes-single-items .comments-area .comments-form textarea {
   border: 1px solid #e7e7e7;
   box-shadow: inherit;
@@ -3777,7 +3798,7 @@ ul.pagination {
 }
 
 .hibiscus .causes-single-items .comments-area .comments-form button {
-    border: 2px solid #bf3654 !important;
+  border: 2px solid #bf3654 !important;
 }
 
 .causes-single-items .comments-area .comments-form .form-group.full-width.submit {
@@ -3786,8 +3807,8 @@ ul.pagination {
 
 
 
-/* ============================================================== 
-     # Volunteer 
+/* ==============================================================
+     # Volunteer
 =================================================================== */
 
 .volunteer-area h5 {
@@ -3798,7 +3819,7 @@ ul.pagination {
 }
 
 .hibiscus .volunteer-area h5 {
-    color: #bf3654;
+  color: #bf3654;
 }
 
 .volunteer-area h2 {
@@ -3834,7 +3855,7 @@ ul.pagination {
 }
 
 .hibiscus .volunteer-area form button {
-    border: 2px solid #bf3654 !important;
+  border: 2px solid #bf3654 !important;
 }
 
 .shape-bottom {
@@ -3847,8 +3868,8 @@ ul.pagination {
 }
 
 
-/* ============================================================== 
-     # Event 
+/* ==============================================================
+     # Event
 =================================================================== */
 
 .event-area .shape-bottom-left {
@@ -3890,8 +3911,8 @@ ul.pagination {
   color: #3bcf93;
 }
 
-.hibiscus .event-area .item .thumb .date strong  {
-    color: #bf3654;
+.hibiscus .event-area .item .thumb .date strong {
+  color: #bf3654;
 }
 
 .event-area .info {
@@ -3916,7 +3937,7 @@ ul.pagination {
 }
 
 .hibiscus .event-area .info .time i {
-    color: #bf3654;
+  color: #bf3654;
 }
 
 .event-area .info a {
@@ -3927,7 +3948,7 @@ ul.pagination {
   margin: 0;
 }
 
-.event-area .event-items.event-carousel .owl-nav .owl-prev, 
+.event-area .event-items.event-carousel .owl-nav .owl-prev,
 .event-area .event-items.event-carousel .owl-nav .owl-next {
   background: transparent none repeat scroll 0 0;
   color: #232323;
@@ -3985,11 +4006,11 @@ ul.pagination {
 }
 
 .hibiscus .event-area .event-items.event-carousel.owl-carousel .owl-dot.active span::after {
-    background: #bf3654;
+  background: #bf3654;
 }
 
-/* ============================================================== 
-     # Event Grid 
+/* ==============================================================
+     # Event Grid
 =================================================================== */
 
 .event-area .event-grid-items .item {
@@ -4047,12 +4068,12 @@ ul.pagination {
 }
 
 .hibiscus .event-area .event-grid-items .item .info ul li i {
-    color: #bf3654;
+  color: #bf3654;
 }
 
 
-/* ============================================================== 
-     # Clients 
+/* ==============================================================
+     # Clients
 =================================================================== */
 .clients-area .client-items .item img {
   margin: auto;
@@ -4078,8 +4099,8 @@ ul.pagination {
 }
 
 
-/* ============================================================== 
-     # Fun Fact 
+/* ==============================================================
+     # Fun Fact
 =================================================================== */
 
 .fun-factor-area.half-bg::after {
@@ -4101,7 +4122,7 @@ ul.pagination {
 }
 
 .hibiscus .fun-factor-area .fact-items {
-    background: #bf3654;
+  background: #bf3654;
 }
 
 .fun-factor-area .fact-items::after {
@@ -4117,7 +4138,7 @@ ul.pagination {
 }
 
 .hibiscus .fun-factor-area .fact-items::after {
-    background: #bf3654;
+  background: #bf3654;
 }
 
 .fun-factor-area .fact-items .item {
@@ -4158,8 +4179,8 @@ ul.pagination {
   text-transform: capitalize;
 }
 
-/* ============================================================== 
-     # Donation 
+/* ==============================================================
+     # Donation
 =================================================================== */
 .donation-area .fixed-bg {
   background-size: cover;
@@ -4185,15 +4206,15 @@ ul.pagination {
   }
 }
 
-.donation-area .info > h5 {
+.donation-area .info>h5 {
   color: #3bcf93;
   font-weight: 700;
   text-transform: uppercase;
   margin-bottom: 25px;
 }
 
-.hibiscus .donation-area .info > h5 {
-    color: #bf3654;
+.hibiscus .donation-area .info>h5 {
+  color: #bf3654;
 }
 
 .donation-area .info h2 {
@@ -4222,8 +4243,8 @@ ul.pagination {
 }
 
 .hibiscus .donation-area .info .question .icon i {
-    background: #bf3654;
-    color: #ffffff;
+  background: #bf3654;
+  color: #ffffff;
 }
 
 .donation-area .info .question .icon i::after {
@@ -4240,7 +4261,7 @@ ul.pagination {
 }
 
 .hibiscus .donation-area .info .question .icon i::after {
-    background: #bf3654;
+  background: #bf3654;
 }
 
 .donation-area .info .question .info h5 {
@@ -4319,31 +4340,31 @@ ul.pagination {
 }
 
 .donation-area.bg-gray .donation-form span.input-group-addon {
-    background-color: #e7eef7;
-    color: #232323;
+  background-color: #e7eef7;
+  color: #232323;
 }
 
 .hibiscus .banner-area .content span {
-    background-color: #bf3654;
+  background-color: #bf3654;
 }
 
 .donation-area .donation-form input::-webkit-input-placeholder {
- /* Chrome/Opera/Safari */
+  /* Chrome/Opera/Safari */
   color: #232323;
 }
 
 .donation-area .donation-form input::-moz-placeholder {
- /* Firefox 19+ */
+  /* Firefox 19+ */
   color: #232323;
 }
 
 .donation-area .donation-form input:-ms-input-placeholder {
- /* IE 10+ */
+  /* IE 10+ */
   color: #232323;
 }
 
 .donation-area .donation-form input:-moz-placeholder {
- /* Firefox 18- */
+  /* Firefox 18- */
   color: #232323;
 }
 
@@ -4353,8 +4374,8 @@ ul.pagination {
 }
 
 
-/* ============================================================== 
-     # We Do 
+/* ==============================================================
+     # We Do
 =================================================================== */
 
 .wedo-area.inc-shadow::after {
@@ -4381,10 +4402,10 @@ ul.pagination {
 }
 
 .wedo-area .thumb img {
-    border-radius: 8px;
-    box-shadow: 0 5px 30px 0 rgba(214, 215, 216, 0.57);
-    padding: 10px;
-    background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 5px 30px 0 rgba(214, 215, 216, 0.57);
+  padding: 10px;
+  background: #ffffff;
 }
 
 .wedo-area .thumb .overlay {
@@ -4410,7 +4431,7 @@ ul.pagination {
 }
 
 .hibiscus .wedo-area .info h5 {
-    color: #bf3654;
+  color: #bf3654;
 }
 
 .wedo-area .info h2 {
@@ -4449,7 +4470,7 @@ ul.pagination {
 }
 
 .hibiscus .wedo-area .info ul li i {
-    color: #bf3654;
+  color: #bf3654;
 }
 
 .wedo-area .info i::after {
@@ -4511,7 +4532,7 @@ ul.pagination {
 }
 
 .hibiscus .wedo-area .thumb .overlay .timer {
-    color: #bf3654;
+  color: #bf3654;
 }
 
 .wedo-area .thumb .overlay .medium {
@@ -4542,8 +4563,8 @@ ul.pagination {
 }
 
 
-/* ============================================================== 
-     # Volunteer Team 
+/* ==============================================================
+     # Volunteer Team
 =================================================================== */
 
 .volunteer-area .volunteer-items .single-item {
@@ -4579,7 +4600,7 @@ ul.pagination {
 }
 
 .hibiscus .volunteer-area .volunteer-items .thumb .social li a {
-    color: #bf3654;
+  color: #bf3654;
 }
 
 .volunteer-area .volunteer-items .thumb .social {
@@ -4626,7 +4647,7 @@ ul.pagination {
 }
 
 .hibiscus .volunteer-area .volunteer-items .item .info span {
-    color: #bf3654;
+  color: #bf3654;
 }
 
 .volunteer-area .volunteer-items.volunteer-carousel.owl-carousel .owl-dot {
@@ -4667,11 +4688,11 @@ ul.pagination {
 }
 
 .hibiscus .volunteer-area .volunteer-items.volunteer-carousel.owl-carousel .owl-dot.active span::after {
-    background: #bf3654;
+  background: #bf3654;
 }
 
-/* ============================================================== 
-     # Testimonials 
+/* ==============================================================
+     # Testimonials
 =================================================================== */
 .testimonials-area .item .provider {
   align-items: center;
@@ -4691,7 +4712,7 @@ ul.pagination {
 }
 
 .hibiscus .testimonials-area .item .provider span {
-    color: #bf3654;
+  color: #bf3654;
 }
 
 .testimonials-area .item .info {
@@ -4708,21 +4729,21 @@ ul.pagination {
 }
 
 .testimonials-area .item .info i {
-    left: 50px;
-    top: 0;
-    height: 60px;
-    background: #3bcf93;
-    width: 50px;
-    border-radius: 0 0 30px 30px;
-    text-align: center;
-    line-height: 60px;
-    color: #ffffff;
-    display: inline-block;
-    font-size: 25px;
+  left: 50px;
+  top: 0;
+  height: 60px;
+  background: #3bcf93;
+  width: 50px;
+  border-radius: 0 0 30px 30px;
+  text-align: center;
+  line-height: 60px;
+  color: #ffffff;
+  display: inline-block;
+  font-size: 25px;
 }
 
 .hibiscus .testimonials-area .item .info i {
-    background: #bf3654;
+  background: #bf3654;
 }
 
 .testimonials-area .testimonial-items.testimonial-carousel.owl-carousel .owl-dot {
@@ -4763,10 +4784,10 @@ ul.pagination {
 }
 
 .hibiscus .testimonials-area .testimonial-items.testimonial-carousel.owl-carousel .owl-dot.active span::after {
-    background: #bf3654;
+  background: #bf3654;
 }
 
-/* ============================================================== 
+/* ==============================================================
      # Cirlce Progressbar
 =================================================================== */
 .circle-chart {
@@ -4799,8 +4820,8 @@ ul.pagination {
  */
 
 .circle-chart__circle--negative {
-  transform: rotate(-90deg) scale(1,-1);
- /* 1, 2, 3 */
+  transform: rotate(-90deg) scale(1, -1);
+  /* 1, 2, 3 */
   ;
 }
 
@@ -4852,8 +4873,8 @@ ul.pagination {
   }
 }
 
-/* ============================================================== 
-     # Gallery 
+/* ==============================================================
+     # Gallery
 =================================================================== */
 
 .gallery-area .gallery-items-area {
@@ -4932,7 +4953,7 @@ ul.pagination {
   transition: all 0.35s ease-in-out;
 }
 
-.gallery-area .gallery-items .pf-item .item-inner:hover  img {
+.gallery-area .gallery-items .pf-item .item-inner:hover img {
   -webkit-transform: scale(1.2);
   transform: scale(1.2);
 }
@@ -4992,7 +5013,7 @@ ul.pagination {
 }
 
 .hibiscus .gallery-area .gallery-items .pf-item .item-inner .view a {
-    color: #bf3654;
+  color: #bf3654;
 }
 
 .gallery-area .gallery-items .pf-item .item-inner::before {
@@ -5019,8 +5040,8 @@ ul.pagination {
 }
 
 
-/* ============================================================== 
-     # Help Us Area 
+/* ==============================================================
+     # Help Us Area
 =================================================================== */
 
 .help-step-area .info h2 {
@@ -5063,7 +5084,7 @@ ul.pagination {
 }
 
 .hibiscus .help-step-area .info .question .icon i {
-    background: #bf3654;
+  background: #bf3654;
 }
 
 .help-step-area .info .question .icon i::after {
@@ -5080,7 +5101,7 @@ ul.pagination {
 }
 
 .hibiscus .help-step-area .info .question .icon i::after {
-    background: #bf3654;
+  background: #bf3654;
 }
 
 .help-step-area .info .question .info h5 {
@@ -5129,7 +5150,7 @@ ul.pagination {
 }
 
 .hibiscus .help-sourse .item .thumb a .overlay h4::after {
-    background: #bf3654;
+  background: #bf3654;
 }
 
 .help-sourse .item .thumb:hover a .overlay h4::after {
@@ -5157,7 +5178,7 @@ ul.pagination {
 }
 
 .hibiscus .help-sourse .fun-fact .timer {
-    color: #bf3654;
+  color: #bf3654;
 }
 
 .help-sourse.text-center .fun-fact .timer {
@@ -5207,7 +5228,7 @@ ul.pagination {
 }
 
 .hibiscus .achivement .progress-box .progress-bar {
-    background: #bf3654;
+  background: #bf3654;
 }
 
 .help-step-area .achivement {
@@ -5219,8 +5240,8 @@ ul.pagination {
 }
 
 
-/* ============================================================== 
-     # Blog 
+/* ==============================================================
+     # Blog
 =================================================================== */
 
 .blog-area .single-item,
@@ -5248,7 +5269,7 @@ ul.pagination {
 }
 
 .hibiscus .blog-area .blog-items .thumb .date {
-    background: #bf3654;
+  background: #bf3654;
 }
 
 .blog-area .blog-items .thumb .date strong {
@@ -5284,7 +5305,7 @@ ul.pagination {
 }
 
 .hibiscus .blog-area .item .meta ul li a:hover {
-    color: #bf3654;
+  color: #bf3654;
 }
 
 .blog-area .item .meta ul li i {
@@ -5294,7 +5315,7 @@ ul.pagination {
 }
 
 .hibiscus .blog-area .item .meta ul li i {
-    color: #bf3654;
+  color: #bf3654;
 }
 
 .blog-area .item .meta ul li::after {
@@ -5327,7 +5348,7 @@ ul.pagination {
 }
 
 .hibiscus .blog-area .item .info .tags a:hover {
-    color: #bf3654;
+  color: #bf3654;
 }
 
 .blog-area .blog-items .info a.btn-more {
@@ -5335,7 +5356,7 @@ ul.pagination {
 }
 
 .hibiscus .blog-area .blog-items .info a.btn-more {
-    color: #bf3654;
+  color: #bf3654;
 }
 
 .btn-more {
@@ -5357,7 +5378,7 @@ ul.pagination {
 }
 
 .hibiscus .btn-more::after {
-    border-bottom: 1px dashed #bf3654;
+  border-bottom: 1px dashed #bf3654;
 }
 
 .btn-more:hover::after {
@@ -5369,7 +5390,7 @@ ul.pagination {
 }
 
 .hibiscus .btn-more:hover::after {
-    border-color: #bf3654;
+  border-color: #bf3654;
 }
 
 a.btn-more:hover {
@@ -5377,7 +5398,7 @@ a.btn-more:hover {
 }
 
 .hibiscus a.btn-more:hover {
-    color: #bf3654;
+  color: #bf3654;
 }
 
 .blog-area .item h4 a:hover {
@@ -5385,7 +5406,7 @@ a.btn-more:hover {
 }
 
 .hibiscus .blog-area .item h4 a:hover {
-    color: #bf3654;
+  color: #bf3654;
 }
 
 .blog-area .item .tags ul li {
@@ -5427,7 +5448,7 @@ a.btn-more:hover {
 }
 
 .hibiscus .blog-area .blog-grid-item .tags ul li a {
-    color: #bf3654;
+  color: #bf3654;
 }
 
 .blog-area .blog-grid-item .tags ul li::after {
@@ -5439,7 +5460,7 @@ a.btn-more:hover {
 }
 
 .hibiscus .blog-area .blog-grid-item .tags ul li::after {
-    color: #bf3654;
+  color: #bf3654;
 }
 
 .blog-area .blog-grid-item .tags ul li:last-child::after {
@@ -5478,7 +5499,7 @@ a.btn-more:hover {
 }
 
 .hibiscus .blog-area .blog-grid-item .meta ul li a {
-    color: #bf3654;
+  color: #bf3654;
 }
 
 .blog-area .blog-grid-item {
@@ -5530,7 +5551,7 @@ a.btn-more:hover {
 }
 
 .hibiscus .blog-area .sidebar .title h4::after {
-    border-left: 3px solid #bf3654;
+  border-left: 3px solid #bf3654;
 }
 
 .blog-area .sidebar input[type="text"] {
@@ -5565,7 +5586,7 @@ a.btn-more:hover {
 }
 
 .hibiscus .blog-area .sidebar button[type="submit"] {
-    background: #bf3654;
+  background: #bf3654;
 }
 
 .blog-area .sidebar input[type="submit"]:hover {
@@ -5573,7 +5594,7 @@ a.btn-more:hover {
 }
 
 .hibiscus .blog-area .sidebar input[type="submit"]:hover {
-    background: #bf3654;
+  background: #bf3654;
 }
 
 .blog-area .sidebar .sidebar-item {
@@ -5587,7 +5608,7 @@ a.btn-more:hover {
   margin-bottom: 0;
 }
 
-.blog-area .sidebar .sidebar-item.category .sidebar-info, 
+.blog-area .sidebar .sidebar-item.category .sidebar-info,
 .blog-area .sidebar .sidebar-item.archives .sidebar-info {
   margin-top: -5px;
 }
@@ -5610,7 +5631,7 @@ a.btn-more:hover {
 }
 
 .hibiscus .blog-area .sidebar .sidebar-item li a:hover {
-    color: #bf3654;
+  color: #bf3654;
 }
 
 .blog-area .sidebar .sidebar-item.category li a span {
@@ -5663,7 +5684,7 @@ a.btn-more:hover {
 
 .hibiscus .sidebar-item.recent-post .meta-title i,
 .hibiscus .sidebar-item.recent-post li a:hover {
-    color: #bf3654;
+  color: #bf3654;
 }
 
 .sidebar-item.recent-post li a:hover {
@@ -5688,7 +5709,7 @@ a.btn-more:hover {
 }
 
 .hibiscus .sidebar-item.recent-post li span {
-    color: #bf3654;
+  color: #bf3654;
 }
 
 .sidebar-item.recent-post .meta-title a {
@@ -5867,7 +5888,7 @@ a.btn-more:hover {
 }
 
 .hibiscus .sidebar-item.tags ul li a:hover {
-    color: #bf3654;
+  color: #bf3654;
 }
 
 .blog-area .sidebar .sidebar-item.donation .sidebar-info {
@@ -5893,7 +5914,7 @@ a.btn-more:hover {
 }
 
 .hibiscus .blog-area .sidebar .sidebar-item.donation .sidebar-info::after {
-    background: #bf3654;
+  background: #bf3654;
 }
 
 .blog-area .sidebar .sidebar-item.donation .sidebar-info h4 {
@@ -5910,7 +5931,7 @@ a.btn-more:hover {
   margin-top: 9px;
 }
 
-.blog-area .blog-items.content-less .item .info > a {
+.blog-area .blog-items.content-less .item .info>a {
   margin-top: 10px;
 }
 
@@ -5926,7 +5947,7 @@ a.btn-more:hover {
 }
 
 .hibiscus .blog-area.single .item .content-box span {
-    background: #bf3654;
+  background: #bf3654;
 }
 
 .blog-area.single .item .content-box h2,
@@ -5954,7 +5975,7 @@ a.btn-more:hover {
   padding: 0;
 }
 
-.blog-area .blog-items .info > ul li {
+.blog-area .blog-items .info>ul li {
   margin-bottom: 15px;
   color: #232323;
   position: relative;
@@ -5962,12 +5983,12 @@ a.btn-more:hover {
   padding-left: 18px;
 }
 
-.blog-area .blog-items .info > ul {
+.blog-area .blog-items .info>ul {
   margin-bottom: 25px;
   margin-top: 25px;
 }
 
-.blog-area .blog-items .info > ul li::after {
+.blog-area .blog-items .info>ul li::after {
   position: absolute;
   left: 0;
   top: 11px;
@@ -6017,7 +6038,7 @@ a.btn-more:hover {
 }
 
 .hibiscus .blog-area .item blockquote::before {
-    background: #bf3654;
+  background: #bf3654;
 }
 
 .blog-area .item blockquote::after {
@@ -6032,7 +6053,7 @@ a.btn-more:hover {
 }
 
 .hibiscus .blog-area .item blockquote::after {
-    color: #bf3654;
+  color: #bf3654;
 }
 
 .blog-area .item blockquote p {
@@ -6045,7 +6066,7 @@ a.btn-more:hover {
   font-weight: 500;
 }
 
-.blog-area .blog-content .post-tags, 
+.blog-area .blog-content .post-tags,
 .blog-area .blog-content .share {
   margin-top: 40px;
   display: flex;
@@ -6064,7 +6085,7 @@ a.btn-more:hover {
 }
 
 .hibiscus .blog-area .blog-content .share li a {
-    color: #bf3654;
+  color: #bf3654;
 }
 
 .blog-area .blog-content .share li.facebook a {
@@ -6112,7 +6133,7 @@ a.btn-more:hover {
 }
 
 .hibiscus .blog-area.single .post-pagi-area a {
-    color: #bf3654;
+  color: #bf3654;
 }
 
 .blog-area.single .post-pagi-area h5 {
@@ -6125,7 +6146,7 @@ a.btn-more:hover {
 }
 
 .hibiscus .blog-area.single .post-pagi-area a:hover {
-    color: #bf3654;
+  color: #bf3654;
 }
 
 .blog-area.single.color-yellow .post-pagi-area a:hover {
@@ -6156,7 +6177,7 @@ a.btn-more:hover {
 .responsive-video {
   position: relative;
   padding-bottom: 56.25%;
- /* 16:9 */
+  /* 16:9 */
   padding-top: 25px;
   height: 0;
 }
@@ -6225,8 +6246,8 @@ a.btn-more:hover {
   text-transform: capitalize;
 }
 
-.comments-list .commen-item .content h3, 
-.comments-list .commen-item .content h4, 
+.comments-list .commen-item .content h3,
+.comments-list .commen-item .content h4,
 .comments-list .commen-item .content h5 {
   font-size: 16px;
   font-weight: 600;
@@ -6263,14 +6284,14 @@ a.btn-more:hover {
 }
 
 .hibiscus .comments-info a:hover {
-    color: #bf3654;
+  color: #bf3654;
 }
 
 .comments-info a i {
   margin-right: 10px;
 }
 
-.comments-form input, 
+.comments-form input,
 .comments-form textarea {
   -moz-border-bottom-colors: none;
   -moz-border-left-colors: none;
@@ -6313,7 +6334,7 @@ a.btn-more:hover {
 }
 
 .hibiscus .comments-form button {
-    background: #bf3654;
+  background: #bf3654;
 }
 
 .comments-form button:hover {
@@ -6323,11 +6344,11 @@ a.btn-more:hover {
 }
 
 .hibiscus .comments-form button:hover {
-    background-color: #bf3654;
+  background-color: #bf3654;
 }
 
-.comments-form .title h2, 
-.comments-form .title h3, 
+.comments-form .title h2,
+.comments-form .title h3,
 .comments-form .title h4 {
   border-bottom: 1px solid #e7e7e7;
   font-weight: 700;
@@ -6346,8 +6367,8 @@ a.btn-more:hover {
 }
 
 
-/* ============================================================== 
-     # Contact Area 
+/* ==============================================================
+     # Contact Area
 =================================================================== */
 
 .contact-form-area .address-info {
@@ -6380,7 +6401,7 @@ a.btn-more:hover {
 }
 
 .hibiscus .contact-form-area .address-info .address-items ul li i {
-    color: #bf3654;
+  color: #bf3654;
 }
 
 .contact-form-area .address-info .address-items ul li:last-child {
@@ -6410,7 +6431,8 @@ a.btn-more:hover {
   margin-bottom: 30px;
 }
 
-.contact-form-area .contact-forms input, .contact-form-area .contact-forms textarea {
+.contact-form-area .contact-forms input,
+.contact-form-area .contact-forms textarea {
   border: 1px solid #e7e7e7;
   box-shadow: inherit;
   border-radius: inherit;
@@ -6433,7 +6455,7 @@ a.btn-more:hover {
 }
 
 .hibiscus .contact-form-area .contact-forms button {
-    border: 2px solid #bf3654 !important;
+  border: 2px solid #bf3654 !important;
 }
 
 .contact-form-area .contact-forms button:hover {
@@ -6442,7 +6464,7 @@ a.btn-more:hover {
 }
 
 .hibiscus .contact-form-area .contact-forms button:hover {
-    background: #bf3654;
+  background: #bf3654;
 }
 
 .contact-form-area .contact-forms button i {
@@ -6468,7 +6490,7 @@ a.btn-more:hover {
 
 
 
-/* ============================================================== 
+/* ==============================================================
      # 404
 =================================================================== */
 .error-page-area .error-box {
@@ -6526,12 +6548,12 @@ a.btn-more:hover {
 }
 
 .hibiscus .error-box .search form button {
-    color: #bf3654;
+  color: #bf3654;
 }
 
 
-/* ============================================================== 
-     # Footer 
+/* ==============================================================
+     # Footer
 =================================================================== */
 
 footer {
@@ -6562,7 +6584,7 @@ footer .item {
   margin-top: 50px;
 }
 
-footer .f-item .widget-title, 
+footer .f-item .widget-title,
 footer .f-item img {
   margin-bottom: 30px;
 }
@@ -6603,7 +6625,7 @@ footer form button {
 }
 
 .hibiscus footer form button {
-    background: #bf3654;
+  background: #bf3654;
 }
 
 footer ul li {
@@ -6628,7 +6650,7 @@ footer ul li a:hover {
 }
 
 .hibiscus footer ul li a:hover {
-    color: #bf3654;
+  color: #bf3654;
 }
 
 footer p {
@@ -6655,7 +6677,7 @@ footer .f-item .address li i {
 }
 
 .hibiscus footer .f-item .address li i {
-    color: #bf3654;
+  color: #bf3654;
 }
 
 footer .f-item .address li span {
@@ -6686,34 +6708,34 @@ footer .f-item.about {
   padding-right: 30px;
 }
 
-footer.bg-dark li a, 
+footer.bg-dark li a,
 footer.bg-dark li {
   color: #adb5bd;
 }
 
-footer.bg-dark .f-items form input, 
+footer.bg-dark .f-items form input,
 footer.bg-dark .f-items form input:focus {
   background: transparent;
   color: #ffffff;
 }
 
 footer.bg-dark .f-items form input::-webkit-input-placeholder {
- /* Chrome/Opera/Safari */
+  /* Chrome/Opera/Safari */
   color: #adb5bd;
 }
 
 footer.bg-dark .f-items form input::-moz-placeholder {
- /* Firefox 19+ */
+  /* Firefox 19+ */
   color: #adb5bd;
 }
 
 footer.bg-dark .f-items form input:-ms-input-placeholder {
- /* IE 10+ */
+  /* IE 10+ */
   color: #adb5bd;
 }
 
 footer.bg-dark .f-items form input:-moz-placeholder {
- /* Firefox 18- */
+  /* Firefox 18- */
   color: #adb5bd;
 }
 
@@ -6756,7 +6778,7 @@ footer .f-item.recent-post .item a:hover {
 }
 
 .hibiscus footer .f-item.recent-post .item a:hover {
-    color: #bf3654;
+  color: #bf3654;
 }
 
 footer .f-item.recent-post .item span a {
@@ -6764,7 +6786,7 @@ footer .f-item.recent-post .item span a {
 }
 
 .hibiscus footer .f-item.recent-post .item span a {
-    color: #bf3654;
+  color: #bf3654;
 }
 
 footer .f-item.recent-post span i {
@@ -6812,11 +6834,11 @@ footer.bg-dark .footer-bottom a {
 }
 
 .hibiscus .footer-bottom p a {
-    color: #bf3654 !important;
+  color: #bf3654 !important;
 }
 
-/* ============================================================== 
-     # Preloader 
+/* ==============================================================
+     # Preloader
 =================================================================== */
 .no-js #loader {
   display: none;
@@ -6842,8 +6864,8 @@ footer.bg-dark .footer-bottom a {
 
 
 
-/* ============================================================== 
-     # Demo 
+/* ==============================================================
+     # Demo
 =================================================================== */
 
 .demo-area.demo-conten.default-padding {
@@ -6856,35 +6878,40 @@ footer.bg-dark .footer-bottom a {
 }
 
 .demo-area .item {
-    margin-bottom: 50px
+  margin-bottom: 50px
 }
 
 .demo-area .single-item .info {
   padding: 15px 10px;
   text-align: center;
 }
+
 .demo-area .single-item .info h4 {
-    font-size: 16px;
-    font-weight: 800;
-    margin: 0;
-    text-transform: uppercase;
-    margin-top: 15px;
+  font-size: 16px;
+  font-weight: 800;
+  margin: 0;
+  text-transform: uppercase;
+  margin-top: 15px;
 }
+
 .banner-area .demo-banner h1 {
   font-weight: 700;
   margin-bottom: 20px;
 }
+
 .banner-area .demo-banner img {
   height: auto;
   margin-bottom: 30px;
   max-height: 80px;
 }
+
 .demo-area .def-heading h2 {
   font-weight: 900;
   margin: 25px 0;
   text-transform: uppercase;
   color: #333333;
 }
+
 .demo-footer {
   padding-bottom: 80px;
 }
@@ -6933,15 +6960,19 @@ footer.bg-dark .footer-bottom a {
 footer.demo .copyright {
   margin-top: 15px;
 }
+
 .demo-area .comming-soon.item img {
-    opacity: 0.3;
+  opacity: 0.3;
 }
+
 .banner-area.demo-banner {
   padding: 50px 0;
 }
+
 .demo-area .site-heading {
   margin-bottom: 30px;
 }
+
 .demo-area img {
   background: #ffffff none repeat scroll 0 0;
   padding: 10px;
@@ -6949,17 +6980,17 @@ footer.demo .copyright {
 }
 
 .demo-area.demo-conten .single-item a {
-    position: relative;
-    display: block;
+  position: relative;
+  display: block;
 }
 
 .demo-area.demo-conten .single-item a span {
-    position: absolute;
-    right: 15px;
-    top: -14px;
-    background: linear-gradient(90deg, rgba(30,85,189,1) 0%, rgba(67,126,235,1) 100%);
-    color: #ffffff;
-    padding: 1px 35px;
-    border-radius: 30px;
-    box-shadow: 0 0 10px #cccccc;
+  position: absolute;
+  right: 15px;
+  top: -14px;
+  background: linear-gradient(90deg, rgba(30, 85, 189, 1) 0%, rgba(67, 126, 235, 1) 100%);
+  color: #ffffff;
+  padding: 1px 35px;
+  border-radius: 30px;
+  box-shadow: 0 0 10px #cccccc;
 }

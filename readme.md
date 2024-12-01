@@ -67,10 +67,10 @@ php -S localhost:8888 .ht.router.php
 
 Starts the server in `http://localhost:8888/`.
 
-## **Prettier**
+## **Additional**
+
+Switch theme from terminal
 
 ```
-yarn prettier
+./vendor/bin/drush config:set system.theme default olivero -y
 ```
-
-Runs Prettier to format source files according to defined rules.
