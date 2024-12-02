@@ -1423,6 +1423,11 @@ h2.text-blur {
 body,
 .banner-area,
 .banner-area div {
+  height: 100%;
+}
+
+.banner-area,
+.banner-area div {
   height: 600px;
 }
 
