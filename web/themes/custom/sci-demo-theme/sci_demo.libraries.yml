@@ -32,6 +32,3 @@ global-styling:
     assets/js/jquery.nice-select.min.js: {}
     assets/js/bootsnav.js: {}
     assets/js/main.js: {}
-
-    assets/js/bootstrap.bundle.min.js: {}
-    assets/js/custom.js: {}
