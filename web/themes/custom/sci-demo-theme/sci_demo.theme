@@ -1,1 +1,19 @@
 <?php
+
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter() for page templates.
+ */
+function sci_demo_theme_suggestions_page_alter(array &$suggestions, array $variables)
+{
+  // Get the current path alias.
+  $current_path = \Drupal::service('path_alias.manager')->getAliasByPath(\Drupal::service('path.current')->getPath());
+
+  // Dump the current path.
+  // dump($current_path);
+
+  // Add a suggestion for '/about-us'.
+  if ($current_path === '/about-us') {
+    $suggestions[] = 'page__about_us';
+  }
+}
