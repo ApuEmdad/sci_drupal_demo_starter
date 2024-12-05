@@ -1,8 +1,12 @@
 <div class="hibiscus">
 	{{ page.header }}
-
+	{# {{ dump(page.content) }} #}
 	{{page.content}}
 	{{page.footer}}
-
-
 </div>
+
+{# Rearrange specific components for /about-us #}
+{# {{ page.content['sci_demo_aboutarea'] }} #}
+{# {{ page.content['sci_demo_breadcrumb'] }} #}
+{# Render the rest of the content normally #}
+{# {{ page.content|without('sci_demo_aboutarea', 'sci_demo_aboutarea') }} #}
