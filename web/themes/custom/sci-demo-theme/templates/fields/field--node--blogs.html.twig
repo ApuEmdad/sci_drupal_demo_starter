@@ -1,0 +1,29 @@
+{%
+  set title_classes = [
+    label_display == 'visually_hidden' ? 'visually-hidden',
+  ]
+%}
+
+
+{% if label_hidden %}
+	{% if multiple %}
+		{% for item in items %}
+			{{ item.content }}
+		{% endfor %}
+	{% else %}
+		{% for item in items %}
+			{{ item.content }}
+		{% endfor %}
+	{% endif %}
+{% else %}
+	{{ label }}
+	{% if multiple %}
+		{% for item in items %}
+			{{ item.content }}
+		{% endfor %}
+	{% else %}
+		{% for item in items %}
+			{{ item.content }}
+		{% endfor %}
+	{% endif %}
+{% endif %}

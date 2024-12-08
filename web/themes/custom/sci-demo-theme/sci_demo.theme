@@ -18,3 +18,39 @@ function sci_demo_theme_suggestions_page_alter(array &$suggestions, array $varia
     $suggestions[] = 'page__blogs';
   }
 }
+
+
+/**
+ * Implements hook_preprocess_HOOK() for node templates.
+ */
+function sci_demo_preprocess_node(&$variables)
+{
+
+  // Ensure this logic applies only to the `blogs-page` view.
+  if (isset($variables['view_mode']) && $variables['view_mode'] == 'blogs_page' && $variables['elements']['#view']->id() == 'blogs_page') {
+    dump('hello');
+    return;
+    // Handle image URL
+    if (!empty($variables['content']['field_blog_cover_image']['#items']->entity->uri->value)) {
+      $variables['image_url'] = file_url_transform_relative(file_create_url($variables['content']['field_blog_cover_image']['#items']->entity->uri->value));
+    } else {
+      $variables['image_url'] = '/themes/custom/sci_demo/assets/img/default-blog-image.jpg'; // Default image
+    }
+
+    // Handle description truncation
+    if (!empty($variables['content']['field_blog_description'])) {
+      $rendered_description = \Drupal::service('renderer')->render($variables['content']['field_blog_description']);
+      $variables['truncated_description'] = \Drupal\Component\Utility\Html::escape(strip_tags($rendered_description));
+      $variables['truncated_description'] = mb_substr($variables['truncated_description'], 0, 100) . '...';
+    } else {
+      $variables['truncated_description'] = '';
+    }
+
+    // Generate node URL
+    if (!empty($variables['nid'])) {
+      $variables['node_url'] = \Drupal\Core\Url::fromRoute('entity.node.canonical', ['node' => $variables['nid']])->toString();
+    } else {
+      $variables['node_url'] = '#'; // Fallback if node ID is missing
+    }
+  }
+}
