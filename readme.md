@@ -66,11 +66,3 @@ php -S localhost:8888 .ht.router.php
 ```
 
 Starts the server in `http://localhost:8888/`.
-
-## **Additional**
-
-Switch theme from terminal
-
-```
-./vendor/bin/drush config:set system.theme default olivero -y
-```
