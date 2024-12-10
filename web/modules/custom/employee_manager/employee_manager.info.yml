@@ -1,0 +1,7 @@
+name: 'Employee Manager'
+type: module
+description: 'Manages employee data with a custom table.'
+core_version_requirement: ^10
+package: Custom
+dependencies:
+  - drupal:field

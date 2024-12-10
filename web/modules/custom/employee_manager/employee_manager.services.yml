@@ -1,0 +1,4 @@
+services:
+  controller.employee_manager:
+    class: Drupal\employee_manager\Controller\EmployeeController
+    arguments: ['@database', '@messenger']
