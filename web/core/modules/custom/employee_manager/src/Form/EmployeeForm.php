@@ -68,6 +68,31 @@ class EmployeeForm extends FormBase
   /**
    * {@inheritdoc}
    */
+  public function validateForm(array &$form, FormStateInterface $form_state)
+  {
+    $email = $form_state->getValue('email');
+    $name = $form_state->getValue('name');
+
+    // Validate email format.
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+      $form_state->setErrorByName('email', $this->t('The email address is not valid.'));
+    }
+
+    // Check if name length is at least 3 characters.
+    if (strlen($name) < 3) {
+      $form_state->setErrorByName('name', $this->t('The name must be at least 3 characters long.'));
+    }
+
+    // Ensure the role is selected.
+    $role = $form_state->getValue('role');
+    if (empty($role)) {
+      $form_state->setErrorByName('role', $this->t('Please select a role.'));
+    }
+  }
+
+  /**
+   * {@inheritdoc}
+   */
   public function submitForm(array &$form, FormStateInterface $form_state)
   {
     $employee = [
