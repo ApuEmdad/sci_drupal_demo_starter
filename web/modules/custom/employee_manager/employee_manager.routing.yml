@@ -1,15 +1,15 @@
 employee_manager.edit:
-  path: '/employee/edit/{id}'
+  path: "/employee/edit/{id}"
   defaults:
-    _form: '\Drupal\employee_manager\Form\EmployeeForm'
-    _title: 'Edit Employee'
+    _controller: '\Drupal\employee_manager\Controller\EmployeeController::edit'
+    _title: "Edit Employee"
   requirements:
-    _permission: 'administer site configuration'
+    _permission: "administer site configuration"
 
 employee_manager.delete:
-  path: '/employee/delete/{id}'
+  path: "/employee/delete/{id}"
   defaults:
     _controller: '\Drupal\employee_manager\Controller\EmployeeController::delete'
-    _title: 'Delete Employee'
+    _title: "Delete Employee"
   requirements:
-    _permission: 'administer site configuration'
+    _permission: "administer site configuration"

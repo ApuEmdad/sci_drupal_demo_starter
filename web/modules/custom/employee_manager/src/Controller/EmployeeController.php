@@ -6,6 +6,11 @@ use Drupal\Core\Controller\ControllerBase;
 
 class EmployeeController extends ControllerBase
 {
+  public function edit($id)
+  {
+    $form = \Drupal::formBuilder()->getForm('Drupal\employee_manager\Form\EmployeeForm', $id);
+    return $form;
+  }
 
   public function delete($id)
   {
