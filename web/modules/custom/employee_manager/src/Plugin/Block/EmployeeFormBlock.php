@@ -14,12 +14,12 @@ use Drupal\Core\Block\BlockBase;
  */
 class EmployeeFormBlock extends BlockBase
 {
-
   /**
    * {@inheritdoc}
    */
-  public function build()
+  public function build($parameters = [])
   {
-    return \Drupal::formBuilder()->getForm('Drupal\employee_manager\Form\EmployeeForm');
+    $id = isset($parameters['id']) ? $parameters['id'] : NULL;
+    return \Drupal::formBuilder()->getForm('Drupal\employee_manager\Form\EmployeeForm', $id);
   }
 }

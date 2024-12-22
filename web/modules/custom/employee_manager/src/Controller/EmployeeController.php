@@ -8,8 +8,10 @@ class EmployeeController extends ControllerBase
 {
   public function edit($id)
   {
-    $form = \Drupal::formBuilder()->getForm('Drupal\employee_manager\Form\EmployeeForm', $id);
-    return $form;
+    $block = \Drupal::service('plugin.manager.block')
+      ->createInstance('employee_form_block', []);
+    $block_content = $block->build(['id' => $id]);
+    return $block_content;
   }
 
   public function delete($id)
