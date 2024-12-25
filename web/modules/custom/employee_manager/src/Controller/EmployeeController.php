@@ -6,6 +6,13 @@ use Drupal\Core\Controller\ControllerBase;
 
 class EmployeeController extends ControllerBase
 {
+  public function index()
+  {
+    return [
+      '#markup' => $this->t('This is the employee list page.'),
+    ];
+  }
+
   public function edit($id)
   {
     $block = \Drupal::service('plugin.manager.block')
@@ -21,6 +28,6 @@ class EmployeeController extends ControllerBase
       ->execute();
 
     $this->messenger()->addMessage($this->t('Employee deleted successfully.'));
-    return $this->redirect('<front>');
+    return $this->redirect('employee_manager.employee_list');
   }
 }

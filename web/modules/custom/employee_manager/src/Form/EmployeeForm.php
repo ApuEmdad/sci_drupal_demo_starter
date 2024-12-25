@@ -31,6 +31,8 @@ class EmployeeForm extends FormBase
         ->fetchAssoc() ?? $employee;
     }
 
+    $form['#theme'] = 'employee_manager_form';
+
     $form['id'] = [
       '#type' => 'hidden',
       '#value' => $id,
@@ -64,6 +66,7 @@ class EmployeeForm extends FormBase
 
     return $form;
   }
+
 
   /**
    * {@inheritdoc}

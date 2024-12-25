@@ -1,0 +1,14 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function employee_manager_theme()
+{
+  return [
+    'employee_manager_form' => [
+      'render element' => 'form',
+      'template' => 'employee-manager-form',
+    ],
+  ];
+}

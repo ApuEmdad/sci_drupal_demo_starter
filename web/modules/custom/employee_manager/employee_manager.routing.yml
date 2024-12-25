@@ -1,3 +1,11 @@
+# employee_manager.employee_list:
+#   path: "/employee"
+#   defaults:
+#     _controller: '\Drupal\employee_manager\Controller\EmployeeController::index'
+#     _title: "Employee List"
+#   requirements:
+#     _permission: "access content"
+
 employee_manager.edit:
   path: "/employee/edit/{id}"
   defaults:
