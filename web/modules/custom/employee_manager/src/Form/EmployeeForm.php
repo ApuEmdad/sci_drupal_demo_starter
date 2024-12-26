@@ -120,6 +120,6 @@ class EmployeeForm extends FormBase
       $this->messenger()->addMessage($this->t('Employee added successfully.'));
     }
 
-    $form_state->setRedirect('<current>');
+    $form_state->setRedirect('employee_manager.employee_list');
   }
 }
