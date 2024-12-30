@@ -14,5 +14,6 @@
     "twig": "html"
   },
   "editor.fontSize": 11,
-  "workbench.editor.tabSizing": "fit"
+  "workbench.editor.tabSizing": "fit",
+  "editor.defaultFormatter": null
 }

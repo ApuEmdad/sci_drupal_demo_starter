@@ -1,83 +1,39 @@
-{# {% if content.field_blog_cover_image %}
-	{% set image_url = file_url(content.field_blog_cover_image['#items'].entity.uri.value) %}
-{% endif %}
-
 <div class="single-item col-lg-4 col-md-6">
-	<div class="item">
-		<div class="thumb">
-			<a href="blog-single-with-sidebar.html">
-				<img src="{{ image_url }}" alt="Thumb">
-				<span class="date">
-					24
-					<strong>Aug</strong>
-				</span>
-			</a>
-		</div>
-		<div class="info">
-			<h4>
-				<a href="blog-single-with-sidebar.html">
-					{{ content.field_blog_title }}
-				</a>
-			</h4>
-			<div class="meta">
-				<ul>
-					<li>By
-						<a href="#">
-							{{ content.field_blog_author }}
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<i class="fas fa-comments"></i>
-							12 Comments
-						</a>
-					</li>
-				</ul>
-			</div>
-			<p>
-				{{ content.field_blog_description|render|striptags|slice(0, 100) }}...
-			</p>
-			<a class="btn-more" href="blog-single-with-sidebar.html">Read More</a>
-		</div>
-	</div>
-</div> #}
-
-<div class="single-item col-lg-4 col-md-6">
-	<div class="item">
-		<div class="thumb">
-			<a href="{{node_url}}">
-				<img src="{{ blog_cover_image_url }}" alt="Thumb">
-				<span class="date">
-					24
-					<strong>Aug</strong>
-				</span>
-			</a>
-		</div>
-		<div class="info">
-			<h4>
-				<a href="{{node_url}}">
-					{{ content.field_blog_title }}
-				</a>
-			</h4>
-			<div class="meta">
-				<ul>
-					<li>By
-						<a href="#">
-							{{ content.field_blog_author }}
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<i class="fas fa-comments"></i>
-							12 Comments
-						</a>
-					</li>
-				</ul>
-			</div>
-			<p>
-				{{ blog_description_snippet }}
-			</p>
-			<a class="btn-more" href="{{node_url}}">Read More</a>
-		</div>
-	</div>
+  <div class="item">
+    <div class="thumb">
+      <a href="{{node_url}}">
+        <img src="{{ blog_cover_image_url }}" alt="Thumb">
+        <span class="date">
+          24
+          <strong>Aug</strong>
+        </span>
+      </a>
+    </div>
+    <div class="info">
+      <h4>
+        <a href="{{node_url}}">
+          {{ content.field_blog_title }}
+        </a>
+      </h4>
+      <div class="meta">
+        <ul>
+          <li>By
+            <a href="#">
+              {{ content.field_blog_author }}
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fas fa-comments"></i>
+              12 Comments
+            </a>
+          </li>
+        </ul>
+      </div>
+      <p>
+        {{ blog_description_snippet }}
+      </p>
+      <a class="btn-more" href="{{node_url}}">Read More</a>
+    </div>
+  </div>
 </div>
