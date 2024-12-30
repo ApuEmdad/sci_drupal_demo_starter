@@ -5254,6 +5254,13 @@ ul.pagination {
   margin-bottom: 30px;
 }
 
+.blog-area .single-item .item .thumb a img {
+  width: 350px;
+  height: 269px;
+  object-fit: cover;
+}
+
+
 .blog-area .blog-items .thumb {
   position: relative;
   z-index: 1;

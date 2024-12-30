@@ -1,0 +1,102 @@
+{# {{dump(content)}} #}
+<div class="blog-area single full-blog full-blog default-padding">
+  <div class="container">
+    <div class="blog-items">
+      <div class="row">
+        <div class="blog-content wow fadeInUp col-lg-10 offset-lg-1 col-md-12">
+          <!-- Start blog content -->
+          <div class="item">
+
+            <div class="blog-item-box">
+              <!-- Start Post Thumb -->
+              <div class="thumb">
+                <a href="#">
+                  <img src="{{ blog_cover_image_url }}" alt="Thumb">
+                </a>
+              </div>
+              <!-- Start Post Thumb -->
+
+              <div class="info">
+                <div class="tags">
+                  <a href="#">Help</a>
+                  <a href="#">Education</a>
+                </div>
+                <div class="meta">
+                  <ul>
+                    <li><i class="fas fa-calendar-alt"></i> 05 Dec, 2020</li>
+                    <li>By <a href="#">{{content.field_blog_author}}</a></li>
+                  </ul>
+                </div>
+
+                <h3>{{content.field_blog_title}}</h3>
+                <div>
+                  {{content.field_blog_description}}
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End blog content -->
+
+          <!-- Start Post Pagination -->
+          <div class="post-pagi-area">
+            <a href="#">
+              <i class="fas fa-angle-double-left"></i> Previus Post
+              <h5>Hello World</h5>
+            </a>
+            <a href="#">
+              Next Post <i class="fas fa-angle-double-right"></i>
+              <h5>The earth brown</h5>
+            </a>
+          </div>
+          <!-- End Post Pagination -->
+
+          <!-- Start Post Tags-->
+          <div class="post-tags share">
+            <div class="tags">
+              <a href="#">Analysis</a>
+              <a href="#">Process</a>
+            </div>
+            <div class="social">
+              <ul>
+                <li class="facebook">
+                  <a href="#">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                </li>
+                <li class="twitter">
+                  <a href="#">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="pinterest">
+                  <a href="#">
+                    <i class="fab fa-pinterest-p"></i>
+                  </a>
+                </li>
+                <li class="linkedin">
+                  <a href="#">
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- End Post Tags -->
+
+          <div class="blog-comments">
+
+            <?php include 'blog_comments.php' ?>
+
+            <!-- Start Blog Form -->
+            <?php include 'comment_form.php' ?>
+            <!-- End Blog Form -->
+
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+</div>
