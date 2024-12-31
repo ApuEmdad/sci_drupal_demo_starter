@@ -22,6 +22,9 @@ function sci_demo_theme_suggestions_page_alter(array &$suggestions, array $varia
   if ($current_path === '/blogs') {
     $suggestions[] = 'page__blogs';
   }
+  if ($current_path === '/donations') {
+    $suggestions[] = 'page__donation';
+  }
 }
 
 
@@ -55,6 +58,7 @@ function sci_demo_preprocess_breadcrumb(&$variables)
 function sci_demo_preprocess_node(array &$variables)
 {
   $node = $variables['node'];
+  $variables['node_url'] = $node->toUrl()->toString();
   // dump($node);
   // Check if the node type is 'blogs'.
   if ($node->getType() === 'blogs') {
@@ -65,6 +69,19 @@ function sci_demo_preprocess_node(array &$variables)
     if ($node->hasField('field_blog_description') && !$node->get('field_blog_description')->isEmpty()) {
       $description = $node->get('field_blog_description')->value;
       $variables['blog_description_snippet'] = mb_substr(strip_tags($description), 0, 100) . '...';
+    } else {
+      $variables['blog_description_snippet'] = ''; // Default empty value if no description is present.
+    }
+  }
+
+
+  if ($node->getType() === 'donation') {
+    $variables['donation_cover_image_url'] = generateImageUrl($node, 'field_donation_cover_image');
+
+    // Prepare the stripped and truncated blog description.
+    if ($node->hasField('field_donation_description') && !$node->get('field_donation_description')->isEmpty()) {
+      $description = $node->get('field_donation_description')->value;
+      $variables['donation_description_snippet'] = mb_substr(strip_tags($description), 0, 220) . '...';
     } else {
       $variables['blog_description_snippet'] = ''; // Default empty value if no description is present.
     }

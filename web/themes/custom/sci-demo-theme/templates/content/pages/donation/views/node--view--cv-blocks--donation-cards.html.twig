@@ -1,0 +1,46 @@
+<!-- Single Item -->
+<div class="grid-item">
+	<div
+		class="row">
+		{# <div class="thumb col-lg-5" style="background-image: url(assets/img/causes/11.jpg);"> #}
+		<div class="thumb col-lg-5" style="background-image: url({{donation_cover_image_url}});">
+			<span class="cats">Education</span>
+		</div>
+		<div class="info col-lg-7">
+			<div class="top-entry">
+				<div class="date">
+					<i class="fas fa-clock"></i>
+					<strong>Created :
+					</strong>
+					{{node.getCreatedTime()|date('d M, Y')}}
+				</div>
+				<div class="location">
+					<i class="fas fa-map-marker-alt"></i>
+					<strong>Location :
+					</strong>
+					{{content.field_location}}
+				</div>
+			</div>
+			<h3>
+				<a href="{{node_url}}">{{content.field_donation_title}}</a>
+			</h3>
+			<p>
+				{{donation_description_snippet}}
+			</p>
+			<div class="progress-box">
+				<div class="progress">
+					<div class="progress-bar" role="progressbar" data-width="33">
+						<span>33%</span>
+					</div>
+				</div>
+				<p>Raised : $5488
+					<span>
+						Goal :{{content.field_donation_goall_usd}}
+					</span>
+				</p>
+			</div>
+			<a class="btn circle btn-theme border btn-md" href="{{node_url}}">Donate Now</a>
+		</div>
+	</div>
+</div>
+<!-- End Single Item -->
