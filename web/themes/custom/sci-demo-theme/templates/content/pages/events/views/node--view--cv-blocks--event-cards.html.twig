@@ -1,0 +1,35 @@
+{% set start_date = date(event_start_date) %}
+{% set end_date = date(event_end_date) %}
+
+<!-- Single Item -->
+<div class="item">
+	<div class="row">
+		<div class="thumb col-lg-5" style="background-image: url({{event_cover_image_url}});">
+			<div class="date">
+				{{ start_date|date('j')|upper }}
+				<strong>{{ start_date|date('M')|upper }}</strong>
+			</div>
+		</div>
+		<div class="info col-lg-7">
+			<h4>
+				<a href="#">{{content.field_event_name}}</a>
+			</h4>
+			<p>
+				{{event_description_snippet}}
+			</p>
+			<ul class="date">
+				<li>
+					<i class="fas fa-clock"></i>
+					{{ start_date|date('g:i A')|upper }}
+					-
+					{{ end_date|date('g:i A')|upper }}
+				</li>
+				<li>
+					<i class="fas fa-calendar-alt"></i>
+					{{content.field_event_location}}
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<!-- End Single Item -->
