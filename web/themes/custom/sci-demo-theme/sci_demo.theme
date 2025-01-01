@@ -16,15 +16,15 @@ function sci_demo_theme_suggestions_page_alter(array &$suggestions, array $varia
 
   // dump($current_path);
   // Add a suggestion for '/about-us'.
-  if ($current_path === '/about-us') {
-    $suggestions[] = 'page__about_us';
-  }
+  // if ($current_path === '/about-us') {
+  //   $suggestions[] = 'page__about_us';
+  // }
   if ($current_path === '/blogs') {
     $suggestions[] = 'page__blogs';
   }
-  if ($current_path === '/donations') {
-    $suggestions[] = 'page__donation';
-  }
+  // if ($current_path === '/donations') {
+  //   $suggestions[] = 'page__donation';
+  // }
 }
 
 
