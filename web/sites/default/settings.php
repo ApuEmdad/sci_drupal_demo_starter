@@ -890,12 +890,12 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
 # if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
 #   include $app_root . '/' . $site_path . '/settings.local.php';
 # }
-$databases['default']['default'] = array (
+$databases['default']['default'] = array(
   'database' => 'sci_drupal_demo',
-  'username' => 'root',
-  'password' => '',
+  'username' => 'scibd',
+  'password' => 'scibd@123',
   'prefix' => '',
-  'host' => 'localhost',
+  'host' => '10.12.0.21',
   'port' => '3306',
   'isolation_level' => 'READ COMMITTED',
   'driver' => 'mysql',
