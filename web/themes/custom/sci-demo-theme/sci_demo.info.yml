@@ -9,6 +9,7 @@ libraries:
   - sci_demo/global-styling
 regions:
   header: "Header"
+  navbar: "Navbar"
   banner: "Banner"
   slider: "Slider"
   sidebar: "Sidebar"

@@ -1,6 +1,21 @@
-<div class="hibiscus">
-  {{ page.header }}
-  {{page.slider}}
-  {{page.content}}
-  {{page.footer}}
+<div
+	class="hibiscus">
+	<!-- Header -->
+	<header id="home">
+		{{page.header}}
+		{{page.navbar}}
+	</header>
+
+	<!-- Slider -->
+	{{page.slider}}
+
+	<!-- Main Content -->
+	<div class="content">
+		{{ page.content }}
+	</div>
+
+	<!-- Footer -->
+	<footer>
+		{{ page.footer }}
+	</footer>
 </div>
