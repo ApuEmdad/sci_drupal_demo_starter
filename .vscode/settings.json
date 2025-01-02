@@ -1,10 +1,12 @@
 {
   "git.ignoreLimitWarning": true,
-  "files.autoSave": "off",
+  "files.autoSave": "afterDelay",
   "files.autoSaveDelay": 1000,
   "editor.formatOnSave": true,
   "triggerTaskOnSave.tasks": {
-    "drush clear cache": ["**/*"]
+    "drush clear cache": [
+      "**/*"
+    ]
   },
   "liveServer.settings.port": 5501,
   "files.associations": {
@@ -13,7 +15,7 @@
   "emmet.includeLanguages": {
     "twig": "html"
   },
-  "editor.fontSize": 11,
+  "editor.fontSize": 14,
   "workbench.editor.tabSizing": "fit",
   "editor.defaultFormatter": null
 }
