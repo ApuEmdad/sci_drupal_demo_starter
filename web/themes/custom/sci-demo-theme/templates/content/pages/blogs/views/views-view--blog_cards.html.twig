@@ -1,0 +1,8 @@
+{%
+  set classes = [
+    dom_id ? 'blog-area default-padding bottom-less js-view-dom-id-' ~ dom_id,
+  ]
+%}
+<div{{attributes.addClass(classes)}}>
+	{{ include('@sci_demo/templates/component/views/default-views-view.html.twig') }}
+</div>
