@@ -1,3 +1,25 @@
+## **Index**
+
+- [Change theme from terminal](#change-theme-from-terminal)
+- [Template hierarchy](#template-hierarchy)
+- [Drupal Preprocess Hooks](#drupal-preprocess-hooks)
+  - [1. `hook_theme()`](#1-hook_theme)
+  - [2. `hook_preprocess_page()`](#2-hook_preprocess_page)
+  - [3. `hook_preprocess_region()`](#3-hook_preprocess_region)
+  - [4. `hook_preprocess_block()`](#4-hook_preprocess_block)
+  - [5. `hook_preprocess_node()`](#5-hook_preprocess_node)
+  - [6. `hook_preprocess_field()`](#6-hook_preprocess_field)
+  - [7. `hook_preprocess_menu()`](#7-hook_preprocess_menu)
+  - [8. `hook_preprocess_views_view()`](#8-hook_preprocess_views_view)
+  - [9. `hook_preprocess_views_view_field()`](#9-hook_preprocess_views_view_field)
+  - [10. `hook_preprocess_block_view()`](#10-hook_preprocess_block_view)
+  - [11. `hook_preprocess_html()`](#11-hook_preprocess_html)
+  - [12. `hook_preprocess_views_view_unformatted()`](#12-hook_preprocess_views_view_unformatted)
+  - [13. `hook_preprocess_views_view_grid()`](#13-hook_preprocess_views_view_grid)
+  - [14. `hook_preprocess_node_view()`](#14-hook_preprocess_node_view)
+  - [Specific Template Overrides](#specific-template-overrides)
+  - [Common Theme Suggestion Hooks in Drupal](#common-theme-suggestion-hooks-in-drupal)
+
 ## **Change theme from terminal**
 
 Switch theme from terminal
