@@ -23,7 +23,7 @@
         "drupal/devel": "5.2",
         "drupal/easy_breadcrumb": "*",
         "drupal/pathauto": "1.13",
-        "drupal/superfish": "1.8",
+        "drupal/superfish": "^1.8",
         "drush/drush": "^12.5"
     },
     "conflict": {
