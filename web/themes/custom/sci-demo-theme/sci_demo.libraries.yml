@@ -11,7 +11,7 @@ global-styling:
       assets/css/owl.theme.default.min.css: {}
       assets/css/animate.css: {}
       assets/css/bootsnav.css: {}
-      assets/css/style.css: {}
+      assets/css/style.scss: {}
       assets/css/responsive.css: {}
   js:
     assets/js/jquery-1.12.4.min.js: {}
