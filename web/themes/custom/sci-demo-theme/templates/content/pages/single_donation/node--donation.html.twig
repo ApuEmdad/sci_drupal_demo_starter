@@ -28,7 +28,7 @@
 						<p>
 							Smallest directly families surprise honoured am an. Speaking replying mistress him numerous she returned feelings may day. Evening way luckily son exposed get general greatly. Zealously prevailed be arranging do. Set arranging too dejection september happiness. Understood instrument or do connection no appearance do invitation. Dried quick round it or order. Add past see west felt did any. Say out noise you taste merry plate you share. My resolve arrived is we chamber be removal.
 						</p>
-						<a class="btn circle btn-theme border btn-md" href="#">Donate Now</a>
+						<a class="btn circle btn-theme border btn-md" href="/donor-form/{{ node.id }}">Donate Now</a>
 					</div>
 					<!-- End Donation Details -->
 
@@ -141,9 +141,14 @@
 									</li>
 								</ul>
 								<input class="form-control" id="custom-ammount" name="custom-ammount" placeholder="Custom Ammount" type="text">
-								<button type="submit" name="submit" id="submit">
-									Donate Now
-								</button>
+								<button
+                  type="button"
+                  name="submit"
+                  id="submit"
+                  onclick="window.location.href='/donor-form/{{ node.id }}';">
+                  Donate Now
+                </button>
+
 							</form>
 						</div>
 						<div class="item">
