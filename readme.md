@@ -66,3 +66,13 @@ php -S localhost:8888 .ht.router.php
 ```
 
 Starts the server in `http://localhost:8888/`.
+
+## **Useful Commands**
+```
+./vendor/bin/drush --version
+```
+### Cache clear
+
+```
+./vendor/bin/drush cr
+```
