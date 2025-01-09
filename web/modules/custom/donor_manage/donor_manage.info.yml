@@ -1,8 +1,5 @@
-name: "Donor Manage"
+name: "donor_manage"
 type: module
-description: "A module to manage donor data."
-core_version_requirement: ^10
+description: "A custom module to collect donor information and display it in a database table."
 package: Custom
-dependencies:
-  - drupal:field
-  - drupal:node
+core_version_requirement: ^10 || ^11

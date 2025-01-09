@@ -4,44 +4,44 @@
  * Implements hook_schema().
  */
 function donor_manage_schema() {
-  $schema['donor'] = [
+  $schema['donor_data'] = [
     'description' => 'Stores donor information.',
     'fields' => [
       'id' => [
-        'description' => 'Primary Key: Unique donor ID.',
         'type' => 'serial',
         'not null' => TRUE,
       ],
-      'name' => [
-        'description' => 'Name of the donor.',
+      'donation_id' => [
         'type' => 'varchar',
-        'length' => 255,
+        'length' => 64,
+        'not null' => TRUE,
+      ],
+      'donor_name' => [
+        'type' => 'varchar',
+        'length' => 128,
         'not null' => TRUE,
       ],
       'email' => [
-        'description' => 'Email address of the donor.',
         'type' => 'varchar',
-        'length' => 255,
+        'length' => 254,
         'not null' => TRUE,
       ],
       'address' => [
-        'description' => 'Address of the donor.',
         'type' => 'text',
         'not null' => FALSE,
       ],
       'amount' => [
-        'description' => 'Donation amount.',
         'type' => 'float',
         'not null' => TRUE,
-        'default' => 0,
       ],
-      'donation_id' => [
-        'description' => 'Foreign key to the related donation.',
+      'created' => [
         'type' => 'int',
+        'size' => 'normal',
         'not null' => TRUE,
-        'default' => 0,
+        'description' => 'The time when the donation was made.',
       ],
     ],
+
     'primary key' => ['id'],
     'indexes' => [
       'donation_id' => ['donation_id'],
@@ -50,4 +50,3 @@ function donor_manage_schema() {
 
   return $schema;
 }
-

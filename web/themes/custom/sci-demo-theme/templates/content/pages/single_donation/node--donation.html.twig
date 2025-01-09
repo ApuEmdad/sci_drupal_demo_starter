@@ -1,5 +1,6 @@
 <!-- Start Causes Single
     ============================================= -->
+    {{dump(content)}}
 <div class="causes-single-area default-padding">
 	<div class="container">
 		<div class="causes-single-items">
@@ -9,7 +10,8 @@
 
 					<!-- Start Donation Details -->
 					<div class="info">
-						<img src="assets/img/causes/11.jpg" alt="Thumb">
+						{# <img src="assets/img/causes/11.jpg" alt="Thumb"> #}
+						<img src="{{donation_cover_image_url}}" alt="Thumb">
 						<div class="top-entry">
 							<div class="date">
 								<i class="fas fa-clock"></i>
@@ -24,9 +26,9 @@
 								Mombasa, Africa
 							</div>
 						</div>
-						<h4>Give Education To Africa</h4>
+						<h4>{{content.field_donation_title}}</h4>
 						<p>
-							Smallest directly families surprise honoured am an. Speaking replying mistress him numerous she returned feelings may day. Evening way luckily son exposed get general greatly. Zealously prevailed be arranging do. Set arranging too dejection september happiness. Understood instrument or do connection no appearance do invitation. Dried quick round it or order. Add past see west felt did any. Say out noise you taste merry plate you share. My resolve arrived is we chamber be removal.
+							{{content.field_donation_description}}
 						</p>
 						<a class="btn circle btn-theme border btn-md" href="/donor-form/{{ node.id }}">Donate Now</a>
 					</div>
