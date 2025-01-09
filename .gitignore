@@ -6,10 +6,10 @@
 # https://www.drupal.org/docs/develop/using-composer
 
 # Ignore configuration files that may contain sensitive information
-
+# /web/sites/*/*settings*.php
+# /web/sites/*/*services*.yml
 
 # Ignore paths that may contain user-generated content
-/web/sites/default/files/
 /web/sites/*/files
 /web/sites/*/public
 /web/sites/*/private
@@ -19,13 +19,36 @@
 # Ignore paths that may contain temporary files
 /web/sites/*/translations
 /web/sites/*/tmp
-/web/sites/*/cachePO
-/web/core/assets/vendor
+/web/sites/*/cache
+
+# Ignore drupal core (if not versioning drupal sources)
 /web/vendor
-/web/core/vendor
-
-
-
+/web/core
+/web/modules/README.txt
+/web/profiles/README.txt
+/web/sites/development.services.yml
+/web/sites/default/settings.php
+/web/sites/example.sites.php
+/web/sites/README.txt
+/web/themes/README.txt
+/web/.csslintrc
+/web/.editorconfig
+/web/.eslintignore
+/web/.eslintrc.json
+/web/.gitattributes
+/web/.htaccess
+/web/.ht.router.php
+/web/autoload.php
+/web/composer.json
+/web/composer.lock
+/web/example.gitignore
+/web/index.php
+/web/INSTALL.txt
+/web/LICENSE.txt
+/web/README.txt
+/web/robots.txt
+/web/update.php
+/web/web.config
 
 # Ignore vendor dependencies and scripts
 /vendor
@@ -37,8 +60,7 @@
 /drush
 /drupal.phar
 /drupal
+
+.vscode/
 /.editorconfig
 /.gitattributes
-
-node_modules
-/node_modules
