@@ -1,25 +1,7 @@
-donor_manage.donor_list:
+donor_manage.donor:
   path: '/donor-form/{donation}'
   defaults:
-    _controller: '\Drupal\donor_manage\Controller\DonorController::index'
-    _title: 'Donor Form'
+    _title: 'Donation Form'
+    _form: 'Drupal\donor_manage\Form\DonorForm'
   requirements:
-    _permission: 'administer site configuration'
-
-donor_manage.donor_edit:
-  path: '/donor-form/edit/{id}'
-  defaults:
-    _controller: '\Drupal\donor_manage\Controller\DonorController::edit'
-    _title: 'Edit Donor'
-  requirements:
-    _permission: 'administer site configuration'
-
-
-donor_manage.donor_delete:
-  path: '/donor-form/delete/{id}'
-  defaults:
-    _controller: '\Drupal\donor_manage\Controller\DonorController::delete'
-    _title: 'Delete Donor'
-  requirements:
-    _permission: 'administer site configuration'
-
+    _permission: 'access content'
