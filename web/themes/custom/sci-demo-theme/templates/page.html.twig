@@ -1,5 +1,36 @@
 <div class="hibiscus">
-	{{ page.header }}
-	{{page.content}}
-	{{page.footer}}
+	{% block header %}
+		{% if page.header or page.primary_menu or page.secondary_menu %}
+			<header id="home">
+				<div>
+					{{ page.header }}
+					{% if page.secondary_menu %}
+						{{ page.secondary_menu }}
+					{% endif %}
+				</div>
+
+				{% if page.primary_menu %}
+					<div>
+						{{ page.primary_menu }}
+					</div>
+				{% endif %}
+			</header>
+		{% endif %}
+	{% endblock %}
+
+	{% block slider %}
+		<!-- Placeholder for slider, can be overridden -->
+	{% endblock %}
+
+	{% block content %}
+		<div class="content">
+			{{ page.content }}
+		</div>
+	{% endblock %}
+
+	{% block footer %}
+		<footer>
+			{{ page.footer }}
+		</footer>
+	{% endblock %}
 </div>

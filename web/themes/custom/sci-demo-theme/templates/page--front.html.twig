@@ -1,21 +1,24 @@
-<div
-	class="hibiscus">
-	<!-- Header -->
-	<header id="home">
-		{{page.header}}
-		{{page.navbar}}
-	</header>
+{% extends "page.html.twig" %}
 
-	<!-- Slider -->
-	{{page.slider}}
+{% block header %}
+	{% if page.header or page.primary_menu or page.secondary_menu %}
+		<header id="home">
+			<div>
+				{{ page.header }}
+				{% if page.secondary_menu %}
+					{{ page.secondary_menu }}
+				{% endif %}
+			</div>
 
-	<!-- Main Content -->
-	<div class="content">
-		{{ page.content }}
-	</div>
+			{% if page.primary_menu %}
+				<div>
+					{{ page.primary_menu }}
+				</div>
+			{% endif %}
+		</header>
+	{% endif %}
+{% endblock %}
 
-	<!-- Footer -->
-	<footer>
-		{{ page.footer }}
-	</footer>
-</div>
+{% block slider %}
+	{{ page.slider }}
+{% endblock %}

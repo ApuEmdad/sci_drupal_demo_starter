@@ -1,3 +1,7 @@
+olivero-styling:
+  css:
+    theme:
+      core/themes/olivero/css/components/form-element.css: {}
 global-styling:
   version: VERSION
   css:
