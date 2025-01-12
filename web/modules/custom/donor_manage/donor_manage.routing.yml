@@ -1,5 +1,5 @@
 donor_manage.donor:
-  path: '/donor-form/{donation_id}'
+  path: '/donations/donation/{donation_id}'
   # path: '/donations/donation/{donation_id}'
   defaults:
     _title: 'Donation Form'

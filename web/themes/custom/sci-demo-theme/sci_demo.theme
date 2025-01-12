@@ -99,3 +99,15 @@ function sci_demo_preprocess_node(array &$variables)
     }
   }
 }
+function sci_demo_theme_preprocess_node(array &$variables) {
+  if ($variables['node']->getType() === 'donation') {
+    // Render the custom block.
+    $block_manager = \Drupal::service('plugin.manager.block');
+    $config = [];
+    $plugin_block = $block_manager->createInstance('donor_form_block', $config);
+    $renderable_block = $plugin_block->build();
+
+    // Pass the block content to Twig.
+    $variables['donor_form_block'] = $renderable_block;
+  }
+}

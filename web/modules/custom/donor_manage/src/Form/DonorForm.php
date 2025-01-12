@@ -26,21 +26,40 @@ final class DonorForm extends FormBase
   /**
    * {@inheritdoc}
    */
-  public function buildForm(array $form, FormStateInterface $form_state, $donation_id = NULL): array
-  {
-    if ($donation_id=== NULL) {
-      $donation_id = \Drupal::routeMatch()->getParameter('donation_id');
+  // public function buildForm(array $form, FormStateInterface $form_state, $donation_id = NULL): array
+  // {
+  //   if ($donation_id=== NULL) {
+  //     $donation_id = \Drupal::routeMatch()->getParameter('donation_id');
+  //   }
+
+  public function buildForm(array $form, FormStateInterface $form_state, $node = NULL): array {
+    // Retrieve the current node from the route if not passed explicitly.
+    if ($node === NULL) {
+      $node = \Drupal::routeMatch()->getParameter('node');
     }
 
+    $node_title = $node ? $node->getTitle() : $this->t('Unknown');
+    $donation_id = $node ? $node->id() : NULL;
+    $field_donation_title = $node->get('field_donation_title')->value;
 
+    $form['donation_info'] = [
+      '#markup' => $this->t('You are donating to : @title', [
+        '@title' => $field_donation_title,
+      ]),
+    ];
+     // Add the donation ID as a hidden field.
+     $form['donation_id'] = [
+      '#type' => 'hidden',
+      '#value' => $donation_id,
+    ];
 
     // Donation_id ID field (read-only).
-    $form['donation_id'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Donation ID'),
-      '#default_value' => $donation_id,
-      '#attributes' => ['readonly' => 'readonly'], // Make the field read-only.
-    ];
+    // $form['donation_id'] = [
+    //   '#type' => 'textfield',
+    //   '#title' => $this->t('Donation ID'),
+    //   '#default_value' => $donation_id,
+    //   '#attributes' => ['readonly' => 'readonly'], // Make the field read-only.
+    // ];
 
     $form['donor_name'] = [
       '#type' => 'textfield',
@@ -134,9 +153,7 @@ final class DonorForm extends FormBase
         ->execute();
 
       // Show a success message.
-      $this->messenger()->addStatus($this->t('Thank you for your donation! Donation ID: @id.', [
-        '@id' => $donation_id,
-      ]));
+      $this->messenger()->addStatus($this->t('Thank you for your donation!'));
     }
     else {
       // Log the error and display a message if the table does not exist.
