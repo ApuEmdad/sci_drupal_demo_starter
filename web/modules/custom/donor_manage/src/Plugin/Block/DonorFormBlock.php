@@ -2,14 +2,14 @@
 namespace Drupal\donor_manage\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
-use Drupal\Core\Form\FormStateInterface;
+use Drupal\node\Entity\Node;
 
 /**
- * Provides a block for the donor form.
+ * Provides a block for the Donor Form.
  *
  * @Block(
  *   id = "donor_form_block",
- *   admin_label = @Translation("Donor Form Block"),
+ *   admin_label = @Translation("Donor Form Block")
  * )
  */
 class DonorFormBlock extends BlockBase {
@@ -17,30 +17,26 @@ class DonorFormBlock extends BlockBase {
   /**
    * {@inheritdoc}
    */
-  public function build() {
-    // Load the current node from the route.
-    $node = \Drupal::routeMatch()->getParameter('node');
+  // public function build() {
+  //   $donation_id = \Drupal::routeMatch()->getParameter('donation_id');
 
-    if ($node) {
-      \Drupal::logger('donor_manage')->info('Node ID: @id, Type: @type', [
-        '@id' => $node->id(),
-        '@type' => $node->getType(),
-      ]);
-
-      // Check if the node is of type "donation".
-      if ($node->getType() === 'donation') { // Replace 'donation' with the correct machine name.
-        // Pass the node to the form.
-        $form = \Drupal::formBuilder()->getForm('Drupal\donor_manage\Form\DonorForm', $node);
-        return $form;
-      }
-    } else {
-      \Drupal::logger('donor_manage')->error('No node found in route.');
-    }
-
-    // Display a fallback message.
-    return [
-      '#markup' => $this->t('This block is only available on donation nodes.'),
-    ];
+  //   // Check if the donation ID corresponds to a valid node.
+  //   if ($donation_id instanceof Node) {
+  //     return \Drupal::service('form_builder')->getForm('Drupal\donor_manage\Form\DonorForm', $donation_id->id());
+  //   }
+  //   else {
+  //     return [
+  //       '#markup' => $this->t('Invalid donation ID or donation node not found.'),
+  //     ];
+  //   }
+  // }
+  public function build($parameters = [])
+  {
+    $donation_id = \Drupal::routeMatch()->getParameter('donation_id');
+    
+    return \Drupal::formBuilder()->getForm('Drupal\donor_manage\Form\DonorForm',  $donation_id->id());
   }
 
+
 }
+

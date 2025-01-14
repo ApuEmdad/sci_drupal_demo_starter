@@ -13,6 +13,7 @@ global-styling:
       assets/css/bootsnav.css: {}
       assets/css/style.scss: {}
       assets/css/responsive.css: {}
+      assets/css/donor-manage.css: {}
   js:
     assets/js/jquery-1.12.4.min.js: {}
     assets/js/popper.min.js: {}

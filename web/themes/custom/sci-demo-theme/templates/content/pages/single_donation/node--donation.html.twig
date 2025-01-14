@@ -30,7 +30,7 @@
 						<p>
 							{{content.field_donation_description}}
 						</p>
-						<a class="btn circle btn-theme border btn-md" href="/donor-form/{{ node.id }}">Donate Now</a>
+						<a class="btn circle btn-theme border btn-md" href="/donations/donation/{{ node.id }}/donor-form">Donate Now</a>
 					</div>
 					<!-- End Donation Details -->
 
@@ -147,7 +147,7 @@
                   type="button"
                   name="submit"
                   id="submit"
-                  onclick="window.location.href='/donor-form/{{ node.id }}';">
+                  onclick="window.location.href='/donations/donation/{{ node.id }}/donor-form';">
                   Donate Now
                 </button>
 

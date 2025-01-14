@@ -1,0 +1,169 @@
+.donor-form-area .address-info {
+  padding-left: 50px;
+}
+
+.donor-form-area .address-info .address-items h4 {
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+.donor-form-area .address-info .address-items ul li {
+  display: flex;
+  margin-bottom: 30px;
+  align-items: center;
+}
+
+.donor-form-area .address-info .address-items ul li i {
+  display: inline-block;
+  font-size: 30px;
+  height: 80px;
+  width: 80px;
+  text-align: center;
+  background: #fafafa;
+  line-height: 80px;
+  margin-right: 25px;
+  color: #3bcf93;
+  border: 1px dashed #3bcf93;
+  border-radius: 50%;
+}
+
+.hibiscus .donor-form-area .address-info .address-items ul li i {
+  color: #bf3654;
+}
+
+.donor-form-area .address-info .address-items ul li:last-child {
+  margin-bottom: 0;
+}
+
+.donor-form-area .address-info .address-items ul li p {
+  font-size: 18px;
+  font-weight: 700;
+  color: #232323;
+}
+
+.donor-form-area .address-info .address-items ul li p span {
+  display: block;
+  font-size: 16px;
+  font-weight: 400;
+  color: #666666;
+}
+
+.donor-form-area .donor-forms {
+  padding-right: 50px;
+  border-right: 1px solid #e7e7e7;
+}
+
+.donor-form-area .donor-forms h3 {
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.donor-form-area .donor-forms input,
+.donor-form-area .donor-forms textarea {
+  border: 1px solid #e7e7e7;
+  box-shadow: inherit;
+  border-radius: inherit;
+  padding-left: 15px;
+}
+
+.donor-form-area .donor-forms textarea {
+  min-height: 150px;
+  padding-top: 15px;
+}
+
+.donor-form-area .donor-forms button {
+  background: no-repeat;
+  border: 2px solid #3bcf93 !important;
+  padding: 10px 30px;
+  font-weight: 700;
+  border-radius: 30px;
+  margin-top: 15px;
+  transition: all 0.35s ease-in-out;
+}
+
+.hibiscus .donor-form-area .donor-forms button {
+  border: 2px solid #bf3654 !important;
+}
+
+.donor-form-area .donor-forms button:hover {
+  background: #3bcf93;
+  color: #ffffff;
+}
+
+.hibiscus .donor-form-area .donor-forms button:hover {
+  background: #bf3654;
+}
+
+.donor-form-area .donor-forms button i {
+  margin-left: 5px;
+}
+
+.donor-form-area .donor-forms .loader {
+  margin-left: 10px;
+}
+
+/* The button */
+
+.donor-form-area .donor-data-button {
+  display: flex; /* Center the button */
+  justify-content: center; /* Horizontally center the button */
+  margin-bottom: 50px; /* Increased gap between the button and address-items */
+}
+
+.donor-form-area .donor-data-button .btn {
+  background-color: #bf3654; /* Hibiscus color */
+  color: #ffffff; /* White text */
+  padding: 12px 30px; /* Button padding */
+  font-weight: bold; /* Bold text */
+  border: 2px solid #bf3654; /* Border color to match button */
+  border-radius: 30px; /* Rounded corners */
+  text-decoration: none; /* Remove underline from link */
+  font-size: 16px; /* Button text size */
+  text-align: center;
+  transition: all 0.35s ease-in-out;
+}
+
+.donor-form-area .donor-data-button .btn:hover {
+  background-color: #9e2a44; /* Darker hibiscus color on hover */
+  border-color: #9e2a44; /* Darker border color on hover */
+  color: #ffffff; /* Keep text white on hover */
+  text-decoration: none;
+}
+
+.donor-form-area .donor-data-button .btn:focus {
+  outline: none; /* Remove focus outline */
+}
+
+.donor-form-area .address-info .address-items {
+  margin-top: 50px; /* Increased gap between the button and address items */
+}
+
+
+/* Center the table on the page */
+.donor-data-table-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.donor-data-table {
+  width: 85%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.donor-data-table th,
+.donor-data-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.donor-data-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+

@@ -1,5 +1,4 @@
 <?php
-
 declare(strict_types=1);
 
 namespace Drupal\donor_manage\Form;
@@ -26,111 +25,119 @@ final class DonorForm extends FormBase
   /**
    * {@inheritdoc}
    */
-  // public function buildForm(array $form, FormStateInterface $form_state, $donation_id = NULL): array
-  // {
-  //   if ($donation_id=== NULL) {
-  //     $donation_id = \Drupal::routeMatch()->getParameter('donation_id');
-  //   }
-
-  public function buildForm(array $form, FormStateInterface $form_state, $node = NULL): array {
-    // Retrieve the current node from the route if not passed explicitly.
-    if ($node === NULL) {
-      $node = \Drupal::routeMatch()->getParameter('node');
+  public function buildForm(array $form, FormStateInterface $form_state, $donation_id = NULL): array {
+    // Load the node based on the donation_id parameter.
+    if ($donation_id && is_numeric($donation_id)) {
+      $node = \Drupal::entityTypeManager()->getStorage('node')->load($donation_id);
+    } else {
+      $node = NULL;
     }
 
-    $node_title = $node ? $node->getTitle() : $this->t('Unknown');
-    $donation_id = $node ? $node->id() : NULL;
-    $field_donation_title = $node->get('field_donation_title')->value;
+    // Add a custom theme suggestion for the form.
+    $form['#theme'] = 'donor_manage_form';
 
-    $form['donation_info'] = [
-      '#markup' => $this->t('You are donating to : @title', [
-        '@title' => $field_donation_title,
-      ]),
-    ];
+
+
+    if ($node instanceof \Drupal\node\Entity\Node) {
+      $form['donation_info'] = [
+        '#markup' => $this->t(' @title', [
+          '@title' => $node->get('field_donation_title')->value,
+        ]),
+      ];
+
      // Add the donation ID as a hidden field.
      $form['donation_id'] = [
       '#type' => 'hidden',
       '#value' => $donation_id,
     ];
 
-    // Donation_id ID field (read-only).
-    // $form['donation_id'] = [
-    //   '#type' => 'textfield',
-    //   '#title' => $this->t('Donation ID'),
-    //   '#default_value' => $donation_id,
-    //   '#attributes' => ['readonly' => 'readonly'], // Make the field read-only.
-    // ];
-
     $form['donor_name'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('Donor Name'),
       '#required' => TRUE,
+      '#element_validate' => ['::validateName'],
+      '#attributes' => [
+        'class' => ['form-control'],
+        'placeholder' => $this->t('Full Name'),
+        'id' => 'donor_name',
+  ],
     ];
+
     $form['email'] = [
       '#type' => 'email',
-      '#title' => $this->t('Email Address'),
       '#required' => TRUE,
+      '#element_validate' => ['::validateEmail'],
+      '#attributes' => [
+        'class' => ['form-control'],
+        'placeholder' => $this->t('Email Address'),
+        'id' => 'donor_email',
+  ],
     ];
     $form['address'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('Address'),
       '#required' => TRUE,
+      '#element_validate' => ['::validateAddress'],
+      '#attributes' => [
+        'class' => ['form-control'],
+        'placeholder' => $this->t('Email Address'),
+        'id' => 'donor_address',
+  ],
     ];
 
     $form['amount'] = [
       '#type' => 'number',
-      '#title' => $this->t('Amount Donated'),
       '#required' => TRUE,
+      '#element_validate' => ['::validateAmount'],
+      '#attributes' => [
+        'class' => ['form-control'],
+        'placeholder' => $this->t('Donation Amount'),
+        'id' => 'donation_amount',
+  ],
     ];
 
 
-    $form['actions'] = [
-      '#type' => 'actions',
-      'submit' => [
-        '#type' => 'submit',
-        '#value' => $this->t('Donate'),
-      ],
+    $form['actions']['submit'] = [
+      '#type' => 'submit',
+      '#value' => $this->t('Donate'),
     ];
-
+  }
     return $form;
   }
 
   /**
    * {@inheritdoc}
    */
-  public function validateForm(array &$form, FormStateInterface $form_state)
-  {
-    $formField = $form_state->getValues();
-    $donor_name = trim($formField['donor_name']);
-    $email = trim($formField['email']);
-    $address = trim($formField['address']);
-    $amount = trim($formField['amount']);
 
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-      $form_state->setErrorByName('email', $this->t('The email address is not valid.'));
+  public function validateName(array &$element, FormStateInterface $form_state) {
+    $donor_name = $form_state->getValue($element['#name']);
+    if (strlen(trim($donor_name)) < 3) {
+      $form_state->setError($element, $this->t('Name must be at least 3 characters long.'));
     }
-
-    // Check if name length is at least 3 characters.
-    if (strlen($donor_name) < 3) {
-      $form_state->setErrorByName('donor_name', $this->t('The name must be at least 3 characters long.'));
+  }
+  public function validateEmail(array &$element, FormStateInterface $form_state) {
+    $email = $form_state->getValue($element['#name']);
+    if (!\Drupal::service('email.validator')->isValid($email)) {
+      $form_state->setError($element, $this->t('Please enter a valid email address.'));
     }
+  }
 
-
-    // Validate address is not empty and has a minimum length.
-    if (empty($address) || strlen($address) < 10) {
-      $form_state->setErrorByName('address', $this->t('The address must be at least 10 characters long.'));
+  public function validateAddress(array &$element, FormStateInterface $form_state) {
+    $address = $form_state->getValue($element['#name']);
+    if (strlen(trim($address)) < 5) {
+      $form_state->setError($element, $this->t('Address must be at least 5 characters long.'));
     }
+  }
 
-    // Validate amount is a valid number and greater than 0.
-    if (!is_numeric($amount) || $amount <= 0) {
-      $form_state->setErrorByName('amount', $this->t('The donation amount must be a positive number.'));
+  public function validateAmount(array &$element, FormStateInterface $form_state) {
+    $amount = $form_state->getValue($element['#name']);
+    if ($amount <= 0) {
+      $form_state->setError($element, $this->t('Donation amount must be greater than 0.'));
     }
   }
 
   /**
    * {@inheritdoc}
    */
-  public function submitForm(array &$form, FormStateInterface $form_state): void {
+  public function submitForm(array &$form, FormStateInterface $form_state){
     $donation_id = $form_state->getValue('donation_id');
     $donor_name = $form_state->getValue('donor_name');
     $email = $form_state->getValue('email');
@@ -153,13 +160,15 @@ final class DonorForm extends FormBase
         ->execute();
 
       // Show a success message.
-      $this->messenger()->addStatus($this->t('Thank you for your donation!'));
+      $this->messenger()->addStatus($this->t('Thank you for your donation!'), TRUE);
+
     }
     else {
       // Log the error and display a message if the table does not exist.
       $this->messenger()->addError($this->t('An error occurred: donor_data table does not exist. Please contact the site administrator.'));
       \Drupal::logger('donor_manage')->error('The donor_data table does not exist in the database.');
     }
+
 
     $form_state->setRedirect('donor_manage.donor', ['donation_id' => $donation_id]);
 

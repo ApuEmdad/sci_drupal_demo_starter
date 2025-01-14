@@ -1,0 +1,19 @@
+<?php
+/**
+ * Implements hook_theme().
+ */
+function donor_manage_theme() {
+  return [
+    'donor_manage_form' => [
+      'render element' => 'form',
+      'templates' => 'donor-manage-form', 
+    ],
+    'donor_manage_table' => [
+      'variables' => [
+        'header' => [],
+        'rows' => [],
+        'empty' => '',
+      ],
+    ],
+  ];
+}

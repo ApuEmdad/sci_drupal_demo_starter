@@ -1,0 +1,97 @@
+{{ dump(form) }}
+
+<div class="donor-form-area default-padding">
+  <div class="container">
+    <div class="row align-center">
+      <!-- Start Donor Form -->
+      <div class="col-lg-7 donor-forms">
+        <div class="content">
+          <div class="heading">
+            <h3>You are Donating to:</h3>
+            <h3>
+              {{ form.donation_info }} <!-- This will display the dynamic donation information -->
+            </h3>
+          </div>
+          <form class="donor-form" method="{{ form['#method'] }}" action="{{ form['#action'] }}">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="form-group">
+                  {{ form.donor_name }}
+                  <span class="alert-error"></span>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="form-group">
+                  {{ form.email }}
+                  <span class="alert-error"></span>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="form-group">
+                  {{ form.address }}
+                  <span class="alert-error"></span>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="form-group">
+                  {{ form.amount }}
+                  <span class="alert-error"></span>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-12">
+                <button type="submit" name="submit" class="btn-submit">
+                  Submit Donation <i class="fa fa-paper-plane"></i>
+                </button>
+              </div>
+            </div>
+            <!-- Hidden Tokens -->
+            {{ form.form_token }}
+            {{ form.form_id }}
+          </form>
+        </div>
+      </div>
+      <!-- End Donor Form -->
+      <div class="col-lg-5 address-info">
+        <div class="donor-data-button">
+          <a href="/donations/donor-data" class="btn btn-primary">
+            View Donor Data Information
+          </a>
+        </div>
+
+        <div class="address-items">
+          <ul>
+            <li>
+              <i class="fas fa-map-marker-alt"></i>
+              <p>
+                Our Location
+                <span>Alexima, NT 456678</span>
+              </p>
+            </li>
+            <li>
+              <i class="fas fa-envelope-open"></i>
+              <p>
+                Send Us Mail
+                <span>Info@yourdomain.com</span>
+              </p>
+            </li>
+            <li>
+              <i class="fas fa-mobile-alt"></i>
+              <p>
+                Call Us
+                <span>+456 456 4443</span>
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
