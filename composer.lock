@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3a775638732e883160b4dee6ef820586",
+    "content-hash": "5be193f94d1702019b63c346b3cce517",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2156,6 +2156,54 @@
                 "source": "https://cgit.drupalcode.org/pathauto",
                 "issues": "https://www.drupal.org/project/issues/pathauto",
                 "documentation": "https://www.drupal.org/docs/8/modules/pathauto"
+            }
+        },
+        {
+            "name": "drupal/simplelogin",
+            "version": "7.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/simplelogin.git",
+                "reference": "7.1.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/simplelogin-7.1.0.zip",
+                "reference": "7.1.0",
+                "shasum": "9d81c8356bd28a3d76b8b2070fd59904567a1464"
+            },
+            "require": {
+                "drupal/core": "^9.3 || ^10 || ^11"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "7.1.0",
+                    "datestamp": "1713446655",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "thirstysix",
+                    "homepage": "https://www.drupal.org/user/824886"
+                },
+                {
+                    "name": "ThirstySix",
+                    "homepage": "https://www.drupal.org/user/824886"
+                }
+            ],
+            "description": "Simple Login, Register, Password Reset with Background Image.",
+            "homepage": "https://www.drupal.org/project/simplelogin",
+            "support": {
+                "source": "https://git.drupalcode.org/project/simplelogin"
             }
         },
         {
