@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Drupal\donor_manage\Form;
@@ -62,6 +63,15 @@ final class DonorForm extends FormBase
   ],
     ];
 
+    $form['hidden_donation_id'] = [
+      '#type' => 'hidden',
+      '#value' => $donation_id,
+    ];
+    $form['donor_name'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Donor Name'),
+      '#required' => TRUE,
+    ];
     $form['email'] = [
       '#type' => 'email',
       '#required' => TRUE,
