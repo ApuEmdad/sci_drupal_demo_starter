@@ -78,7 +78,7 @@ final class DonorForm extends FormBase
       '#element_validate' => ['::validateAddress'],
       '#attributes' => [
         'class' => ['form-control'],
-        'placeholder' => $this->t('Email Address'),
+        'placeholder' => $this->t('Address'),
         'id' => 'donor_address',
   ],
     ];
