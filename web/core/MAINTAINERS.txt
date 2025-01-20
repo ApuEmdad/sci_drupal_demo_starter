@@ -305,7 +305,6 @@ Menu UI
 
 Migrate
 - Benji Fisher 'benjifisher' https://www.drupal.org/u/benjifisher
-- Adam Globus-Hoenich 'phenaproxima' https://www.drupal.org/u/phenaproxima
 - Lucas Hedding 'heddn' https://www.drupal.org/u/heddn
 - Michael Lutz 'mikelutz' https://www.drupal.org/u/mikelutz
 - Victoria Spagnolo 'quietone' https://www.drupal.org/u/quietone
@@ -380,6 +379,7 @@ Search
 - Peter Wolanin 'pwolanin' https://www.drupal.org/u/pwolanin
 
 Serialization
+- Brad Jones 'bradjones1' https://www.drupal.org/u/bradjones1
 - Damian Lee 'damiankloip' https://www.drupal.org/u/damiankloip
 
 Settings Tray

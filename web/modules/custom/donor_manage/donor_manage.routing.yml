@@ -1,5 +1,4 @@
 donor_manage.donor:
-<<<<<<< HEAD
   path: '/donations/donation/{donation_id}/donor-form'
   defaults:
     # _form: '\Drupal\donor_manage\Form\DonorForm'
@@ -19,11 +18,3 @@ donor_manage.donor_data:
     _title: 'Donor Data'
   requirements:
     _permission: 'access content'
-=======
-  path: '/donor-form/{donation}'
-  defaults:
-    _title: 'Donation Form'
-    _form: 'Drupal\donor_manage\Form\DonorForm'
-  requirements:
-    _permission: 'access content'
->>>>>>> 760d9ea75208ea58fd3e4c40291a747176f2f1e6

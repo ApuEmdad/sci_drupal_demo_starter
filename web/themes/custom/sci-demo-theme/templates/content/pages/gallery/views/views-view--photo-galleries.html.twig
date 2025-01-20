@@ -1,0 +1,55 @@
+<div class="photo-gallery">
+    <div class="gallery-area bg-gray shape-less default-padding">
+        <div class="container">
+            <div class="heading-left">
+                <div class="row">
+                    <div class="col-lg-6 left-info">
+                        <h2>Photo Galleries</h2>
+                    </div>
+                    <div class="col-lg-6 right-info">
+                        <p>Add your own Photos to the Gallery</p>
+                        <a class="btn circle btn-md btn-gradient wow fadeInUp" href="#">View All
+                            <i class="fas fa-angle-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="gallery-items-area inner-title">
+                        <div class="gallery-content">
+                            <div class="magnific-mix-gallery masonary">
+                                <div id="portfolio-grid" class="gallery-items colums-3">
+                                    {% for row in rows %}
+                                    <div class="pf-item">
+                                        <div class="item-inner">
+                                            <img src="{{ row.custom_field_data.image_url }}" alt="{{ row.custom_field_data.title }}" class="img-fluid">
+                                            <div class="overlay">
+                                                <h4>
+                                                    <a href="{{ row.custom_field_data.node_url }}">{{ row.custom_field_data.title }}</a>
+                                                </h4>
+                                                <span class="cats">{{ row.custom_field_data.description }}</span>
+                                            </div>
+                                            <div class="view">
+                                                <a href="{{ row.custom_field_data.image_url }}" class="item popup-link">
+                                                    <i class="fa fa-plus"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Pagination Controls -->
+            <div class="pagination-wrapper">
+                {{ pager }}
+            </div>
+        </div>
+    </div>
+</div>

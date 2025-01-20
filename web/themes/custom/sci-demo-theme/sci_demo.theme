@@ -111,3 +111,54 @@ function sci_demo_theme_preprocess_node(array &$variables) {
     $variables['donor_form_block'] = $renderable_block;
   }
 }
+
+
+
+function generateMediaImageUrl($node, $field_gallery_images) {
+  if ($node->hasField($field_gallery_images) && !$node->get($field_gallery_images)->isEmpty()) {
+    // Get the referenced media entities.
+    $media_entities = $node->get($field_gallery_images)->referencedEntities();
+
+    if (!empty($media_entities)) {
+      $media_entity = $media_entities[0]; // Retrieve the first media entity.
+
+      if ($media_entity->hasField('field_media_image_1') && !$media_entity->get('field_media_image_1')->isEmpty()) {
+        // Get the file entity.
+        $file = $media_entity->get('field_media_image_1')->entity;
+
+        if ($file) {
+          // Generate and return the absolute URL of the image file.
+          return \Drupal::service('file_url_generator')->generateAbsoluteString($file->getFileUri());
+        }
+      }
+    }
+  }
+
+  return NULL; // Return NULL if no valid image is found.
+}
+
+
+
+function sci_demo_preprocess_views_view(&$variables) {
+  if ($variables['view']->id() === 'photo_galleries') {
+    $variables['view_id'] = 'photo_galleries';
+
+      // Iterate over the rows (each representing a node)
+      foreach ($variables['view']->result as $key => $row) {
+          $node = $row->_entity;
+          // // Generate the image URL for the first image in the gallery_images field
+
+          $image_url = generateMediaImageUrl($node, 'field_gallery_images','gallery_thumbnail' );
+          $node_url = $node->toUrl('canonical', ['absolute' => TRUE])->toString();
+          // Add custom field data to the row
+          $variables['rows'][$key]['custom_field_data'] = [
+              'title' => $node->label(),
+              'description' => $node->get('field_event_description_of_the_i')->value ?? '',
+              'image_url' => $image_url,
+              'node_url' =>  $node_url,
+
+          ];
+      }
+  }
+}
+

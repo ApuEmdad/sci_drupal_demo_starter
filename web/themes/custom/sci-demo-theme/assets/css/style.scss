@@ -6993,3 +6993,65 @@ footer.demo .copyright {
     }
   }
 }
+
+
+/* ==============================================================
+     # Photo Galleries
+=================================================================== */
+
+/* Ensure all images have the same dimensions */
+.photo-gallery .gallery-area .gallery-items .pf-item .item-inner img {
+  width: 100%; /* Ensure the image spans the container's width */
+  aspect-ratio: 4 / 3; /* Maintain a 4:3 ratio */
+  object-fit: contain; /* Ensures the whole image is visible without cropping */
+  object-position: center; /* Centers the image within its container */
+  border-radius: 5px; /* Optional: rounded corners */
+  background-color: #f5f5f5; /* Optional: background color to fill empty spaces */
+}
+
+/* Retain spacing between gallery items */
+.photo-gallery .gallery-area .gallery-items .pf-item {
+  margin-bottom: 30px; /* Space between rows */
+  padding: 15px; /* Space between items */
+}
+
+/* Adjust column widths for different screen sizes */
+.photo-gallery .gallery-area .gallery-items.colums-3 .pf-item {
+  width: 33.33%; /* 3 items per row */
+}
+
+.photo-gallery .gallery-area .gallery-items.colums-4 .pf-item {
+  width: 25%; /* 4 items per row if needed */
+}
+
+.photo-gallery .gallery-area .gallery-items.colums-2 .pf-item {
+  width: 50%; /* 2 items per row for smaller screens */
+}
+
+.photo-gallery .gallery-area .gallery-items.colums-1 .pf-item {
+  width: 100%; /* 1 item per row for mobile screens */
+}
+
+/* Hover effects (unchanged from original) */
+.photo-gallery .gallery-area .gallery-items .pf-item .item-inner::after {
+  opacity: 0;
+  transition: all 0.35s ease-in-out;
+}
+
+.photo-gallery .gallery-area .gallery-items .pf-item .item-inner:hover::after {
+  opacity: 0.5;
+}
+
+.photo-gallery .gallery-area .gallery-items .pf-item .item-inner:hover img {
+  transform: scale(1.1); /* Add a zoom effect */
+}
+
+/* Overlay and view icon effects */
+.photo-gallery .gallery-area .gallery-items .pf-item .item-inner .overlay {
+  opacity: 0;
+  transition: all 0.35s ease-in-out;
+}
+
+.photo-gallery .gallery-area .gallery-items .pf-item .item-inner:hover .overlay {
+  opacity: 1;
+}

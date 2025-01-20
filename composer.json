@@ -16,6 +16,7 @@
     ],
     "require": {
         "composer/installers": "^2.0",
+        "cweagans/composer-patches": "^1.7",
         "drupal/admin_toolbar": "3.4",
         "drupal/core-composer-scaffold": "^10.3",
         "drupal/core-project-message": "^10.3",
@@ -23,7 +24,9 @@
         "drupal/devel": "5.2",
         "drupal/easy_breadcrumb": "*",
         "drupal/pathauto": "1.13",
+        "drupal/slick": "^3.0",
         "drupal/superfish": "^1.8",
+        "drupal/views_slideshow": "^5.0",
         "drush/drush": "^12.5"
     },
     "conflict": {
@@ -34,15 +37,17 @@
     "config": {
         "allow-plugins": {
             "composer/installers": true,
+            "cweagans/composer-patches": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true,
             "drupal/core-composer-scaffold": true,
             "drupal/core-project-message": true,
-            "phpstan/extension-installer": true,
-            "dealerdirect/phpcodesniffer-composer-installer": true,
-            "php-http/discovery": true
+            "php-http/discovery": true,
+            "phpstan/extension-installer": true
         },
         "sort-packages": true
     },
     "extra": {
+
         "drupal-scaffold": {
             "locations": {
                 "web-root": "web/"
@@ -98,5 +103,6 @@
                 "      composer remove drupal/core-project-message"
             ]
         }
+
     }
 }
