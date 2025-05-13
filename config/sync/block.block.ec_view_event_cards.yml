@@ -1,0 +1,29 @@
+uuid: 99057c0e-a214-47fb-9903-d4e40c01b0b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.ec_view
+  module:
+    - system
+    - views
+  theme:
+    - sci_demo
+id: ec_view_event_cards
+theme: sci_demo
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:ec_view-event_cards'
+settings:
+  id: 'views_block:ec_view-event_cards'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /events

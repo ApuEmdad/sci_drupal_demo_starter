@@ -1,0 +1,24 @@
+uuid: a73ef780-de63-4122-b488-37a818983618
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - sci_demo
+id: sci_demo_breadcrumbs
+theme: sci_demo
+region: banner
+weight: -14
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: "<front>\r\n/login"

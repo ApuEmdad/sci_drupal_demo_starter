@@ -1,0 +1,18 @@
+uuid: 829cd88a-43d7-422f-9667-f095acd6ee6e
+langcode: en
+status: true
+dependencies:
+  theme:
+    - sci_demo
+id: sci_demo_primaryadminactions
+theme: sci_demo
+region: highlighted
+weight: 0
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

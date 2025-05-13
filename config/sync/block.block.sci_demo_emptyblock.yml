@@ -1,0 +1,25 @@
+uuid: c6a55784-7d74-4024-b9ee-3ec4393c0f05
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:05ab37ad-48aa-4be6-9c0e-881b9143e167'
+  module:
+    - block_content
+  theme:
+    - sci_demo
+id: sci_demo_emptyblock
+theme: sci_demo
+region: header
+weight: -18
+provider: null
+plugin: 'block_content:05ab37ad-48aa-4be6-9c0e-881b9143e167'
+settings:
+  id: 'block_content:05ab37ad-48aa-4be6-9c0e-881b9143e167'
+  label: 'Empty Block'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

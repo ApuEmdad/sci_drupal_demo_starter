@@ -1,0 +1,18 @@
+uuid: 4e876d42-01e8-4660-836b-731b8765dd23
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Blogs Content Type'
+type: blogs
+description: 'A content type to  showcase blogs'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

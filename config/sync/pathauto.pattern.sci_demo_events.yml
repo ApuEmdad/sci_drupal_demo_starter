@@ -1,0 +1,22 @@
+uuid: 6df51361-a3df-4d1c-87f6-ecc4f3c11871
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: sci_demo_events
+label: sci-demo-events
+type: 'canonical_entities:node'
+pattern: 'events/event/[node:nid]'
+selection_criteria:
+  58435f30-8df0-4072-b317-6b6028fc24b3:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 58435f30-8df0-4072-b317-6b6028fc24b3
+    context_mapping:
+      node: node
+    bundles:
+      event_content_type: event_content_type
+selection_logic: and
+weight: -5
+relationships: {  }

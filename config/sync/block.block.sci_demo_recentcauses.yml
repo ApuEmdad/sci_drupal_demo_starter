@@ -1,0 +1,30 @@
+uuid: 6900a9b0-80f7-48c2-986b-ebbef0dc6d09
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:d80e6f94-16fe-4298-8486-f9e9d784b43f'
+  module:
+    - block_content
+    - system
+  theme:
+    - sci_demo
+id: sci_demo_recentcauses
+theme: sci_demo
+region: content
+weight: -12
+provider: null
+plugin: 'block_content:d80e6f94-16fe-4298-8486-f9e9d784b43f'
+settings:
+  id: 'block_content:d80e6f94-16fe-4298-8486-f9e9d784b43f'
+  label: 'Recent Causes'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

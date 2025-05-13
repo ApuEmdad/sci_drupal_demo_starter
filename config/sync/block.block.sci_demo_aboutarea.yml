@@ -1,0 +1,30 @@
+uuid: 6145efb1-24a8-43f7-b0a9-a2361b5d4083
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:b423fe7e-bff9-429f-b12a-6c7e2500d5d1'
+  module:
+    - block_content
+    - system
+  theme:
+    - sci_demo
+id: sci_demo_aboutarea
+theme: sci_demo
+region: content
+weight: -13
+provider: null
+plugin: 'block_content:b423fe7e-bff9-429f-b12a-6c7e2500d5d1'
+settings:
+  id: 'block_content:b423fe7e-bff9-429f-b12a-6c7e2500d5d1'
+  label: 'About Area'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "<front>\r\n/about-us"

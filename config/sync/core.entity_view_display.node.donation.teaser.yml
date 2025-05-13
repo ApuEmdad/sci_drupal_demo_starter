@@ -1,0 +1,30 @@
+uuid: 3e735633-cfa8-472d-99d7-b5b77a4105cf
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.donation.field_donation_cover_image
+    - field.field.node.donation.field_donation_description
+    - field.field.node.donation.field_donation_goall_usd
+    - field.field.node.donation.field_donation_title
+    - field.field.node.donation.field_location
+    - node.type.donation
+  module:
+    - user
+id: node.donation.teaser
+targetEntityType: node
+bundle: donation
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_donation_cover_image: true
+  field_donation_description: true
+  field_donation_goall_usd: true
+  field_donation_title: true
+  field_location: true

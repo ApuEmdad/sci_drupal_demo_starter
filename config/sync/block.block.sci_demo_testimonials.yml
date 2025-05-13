@@ -1,0 +1,30 @@
+uuid: 1fc21855-d1c8-4bb7-bd53-65e7352751c9
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:839cf040-f375-4c31-a36b-1020ac929187'
+  module:
+    - block_content
+    - system
+  theme:
+    - sci_demo
+id: sci_demo_testimonials
+theme: sci_demo
+region: content
+weight: -6
+provider: null
+plugin: 'block_content:839cf040-f375-4c31-a36b-1020ac929187'
+settings:
+  id: 'block_content:839cf040-f375-4c31-a36b-1020ac929187'
+  label: Testimonials
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

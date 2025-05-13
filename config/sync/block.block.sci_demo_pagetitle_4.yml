@@ -1,0 +1,18 @@
+uuid: fc42d6cb-d7cf-40d7-8d60-f30cdd0c18aa
+langcode: en
+status: true
+dependencies:
+  theme:
+    - sci_demo
+id: sci_demo_pagetitle_4
+theme: sci_demo
+region: footer
+weight: 0
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

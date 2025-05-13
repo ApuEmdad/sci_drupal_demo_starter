@@ -1,0 +1,21 @@
+uuid: 9db1fb89-fd92-4a92-b6a1-cf76527aa9ad
+langcode: en
+status: false
+dependencies:
+  module:
+    - search
+  theme:
+    - sci_demo
+id: sci_demo_searchform
+theme: sci_demo
+region: header
+weight: -15
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form'
+  label_display: '0'
+  provider: search
+  page_id: ''
+visibility: {  }

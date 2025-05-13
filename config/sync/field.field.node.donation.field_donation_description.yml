@@ -1,0 +1,24 @@
+uuid: 887ee244-800a-429e-b064-456da53115e4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_donation_description
+    - filter.format.full_html
+    - node.type.donation
+  module:
+    - text
+id: node.donation.field_donation_description
+field_name: field_donation_description
+entity_type: node
+bundle: donation
+label: 'Donation Description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

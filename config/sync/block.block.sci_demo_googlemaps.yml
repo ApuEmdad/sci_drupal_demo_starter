@@ -1,0 +1,30 @@
+uuid: ff012446-873e-4865-8388-fab82d885721
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:6f258fab-db8c-475d-b4f7-4dad2e32b8d8'
+  module:
+    - block_content
+    - system
+  theme:
+    - sci_demo
+id: sci_demo_googlemaps
+theme: sci_demo
+region: content
+weight: -1
+provider: null
+plugin: 'block_content:6f258fab-db8c-475d-b4f7-4dad2e32b8d8'
+settings:
+  id: 'block_content:6f258fab-db8c-475d-b4f7-4dad2e32b8d8'
+  label: 'Google Maps'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /contact

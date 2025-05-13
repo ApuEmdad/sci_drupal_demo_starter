@@ -1,0 +1,25 @@
+uuid: b62644d4-a09b-4db0-9432-5c965995789e
+langcode: en
+status: true
+dependencies:
+  module:
+    - employee_manager
+    - system
+  theme:
+    - sci_demo
+id: sci_demo_employeetableblock
+theme: sci_demo
+region: content
+weight: 0
+provider: null
+plugin: employee_table_block
+settings:
+  id: employee_table_block
+  label: 'Employee Table Block'
+  label_display: visible
+  provider: employee_manager
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /employee

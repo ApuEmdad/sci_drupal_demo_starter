@@ -1,0 +1,30 @@
+uuid: a3365bbc-67c6-4854-b21e-e95333dbf4a8
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:82264d1a-2554-4c37-9452-8e4015303883'
+  module:
+    - block_content
+    - system
+  theme:
+    - sci_demo
+id: sci_demo_mission
+theme: sci_demo
+region: content
+weight: -10
+provider: null
+plugin: 'block_content:82264d1a-2554-4c37-9452-8e4015303883'
+settings:
+  id: 'block_content:82264d1a-2554-4c37-9452-8e4015303883'
+  label: Mission
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "<front>\r\n/about-us\r\n/our-mission"

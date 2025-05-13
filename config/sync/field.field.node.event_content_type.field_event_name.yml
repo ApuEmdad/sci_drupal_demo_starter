@@ -1,0 +1,19 @@
+uuid: e3b6a9cc-ea60-457b-8eaf-41acca937ef8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event_name
+    - node.type.event_content_type
+id: node.event_content_type.field_event_name
+field_name: field_event_name
+entity_type: node
+bundle: event_content_type
+label: 'Event Name'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

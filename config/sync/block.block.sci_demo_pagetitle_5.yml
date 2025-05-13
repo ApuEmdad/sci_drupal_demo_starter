@@ -1,0 +1,24 @@
+uuid: 3736301e-599e-4773-a93b-0089ca5cbe5e
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - sci_demo
+id: sci_demo_pagetitle_5
+theme: sci_demo
+region: header
+weight: -16
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: "/blogs\r\n/about-us\r\n/blogs-page"

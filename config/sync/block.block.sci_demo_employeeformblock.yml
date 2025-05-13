@@ -1,0 +1,25 @@
+uuid: 0c758869-7fa7-4628-8f48-b34e5308bc97
+langcode: en
+status: true
+dependencies:
+  module:
+    - employee_manager
+    - system
+  theme:
+    - sci_demo
+id: sci_demo_employeeformblock
+theme: sci_demo
+region: content
+weight: -3
+provider: null
+plugin: employee_form_block
+settings:
+  id: employee_form_block
+  label: 'Employee Form Block'
+  label_display: visible
+  provider: employee_manager
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /employee

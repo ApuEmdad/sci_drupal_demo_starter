@@ -1,0 +1,22 @@
+uuid: d3aaed5e-991e-4d10-8a79-668531f652f1
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - sci_demo
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: sci_demo_content
+theme: sci_demo
+region: content
+weight: 6
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

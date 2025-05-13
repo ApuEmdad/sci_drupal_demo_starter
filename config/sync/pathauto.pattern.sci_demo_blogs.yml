@@ -1,0 +1,22 @@
+uuid: 4e796916-9976-4bb7-b5cc-87b7e12ccd02
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: sci_demo_blogs
+label: sci-demo-blogs
+type: 'canonical_entities:node'
+pattern: 'blogs-page/blogs/[node:nid]'
+selection_criteria:
+  33c88b9b-f50b-4d8b-9edd-dfb7fca0ef83:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 33c88b9b-f50b-4d8b-9edd-dfb7fca0ef83
+    context_mapping:
+      node: node
+    bundles:
+      blogs: blogs
+selection_logic: and
+weight: -5
+relationships: {  }

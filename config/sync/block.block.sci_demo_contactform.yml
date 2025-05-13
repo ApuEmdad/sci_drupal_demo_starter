@@ -1,0 +1,30 @@
+uuid: 1a1fc037-9767-4e1f-86cb-eafa207eca38
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:3a0695b0-5a21-4c17-a3e2-d7a0bcb8d807'
+  module:
+    - block_content
+    - system
+  theme:
+    - sci_demo
+id: sci_demo_contactform
+theme: sci_demo
+region: content
+weight: -2
+provider: null
+plugin: 'block_content:3a0695b0-5a21-4c17-a3e2-d7a0bcb8d807'
+settings:
+  id: 'block_content:3a0695b0-5a21-4c17-a3e2-d7a0bcb8d807'
+  label: 'Contact Form'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /contact
