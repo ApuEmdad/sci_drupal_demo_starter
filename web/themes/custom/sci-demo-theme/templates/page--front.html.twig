@@ -1,21 +1,5 @@
-<div
-	class="hibiscus">
-	<!-- Header -->
-	<header id="home">
-		{{page.header}}
-		{{page.navbar}}
-	</header>
+{% extends "page.html.twig" %}
 
-	<!-- Slider -->
-	{{page.slider}}
-
-	<!-- Main Content -->
-	<div class="content">
-		{{ page.content }}
-	</div>
-
-	<!-- Footer -->
-	<footer>
-		{{ page.footer }}
-	</footer>
-</div>
+{% block slider %}
+	{{ page.slider }}
+{% endblock %}

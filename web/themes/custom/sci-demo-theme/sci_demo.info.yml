@@ -9,9 +9,9 @@ libraries:
   - sci_demo/global-styling
 regions:
   header: "Header"
-  navbar: "Navbar"
+  navbar: "Navigation"
   banner: "Banner"
-  highlighted: Highlighted
+  highlighted: "Highlighted"
   slider: "Slider"
   sidebar: "Sidebar"
   content: "Content"
