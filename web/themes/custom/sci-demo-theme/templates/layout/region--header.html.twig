@@ -2,7 +2,6 @@
 <div class="se-pre-con"></div>
 <!-- Preloader Ends -->
 
-<!-- Start Header Top -->
 <div class="top-bar-area inc-pad bg-dark text-light">
 	<div class="container-full">
 		<div class="row align-center">
@@ -20,11 +19,9 @@
 			</div>
 			<div class="col-lg-6 text-right item-flex">
 				<div class="info">
-					<ul>
-						<li><a href="{{ path('user.login') }}">Login</a></li>
-						<li><a href="{{ path('user.register') }}">Register</a></li>
-					</ul>
+					{{ content }}
 				</div>
+				<div></div>
 				<div class="social">
 					<ul>
 						<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
@@ -36,5 +33,3 @@
 		</div>
 	</div>
 </div>
-<!-- End Header Top -->
-{{content}}

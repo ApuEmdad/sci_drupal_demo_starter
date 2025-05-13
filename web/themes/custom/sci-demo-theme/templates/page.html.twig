@@ -1,21 +1,38 @@
 <div class="hibiscus">
-	<!-- Header Section -->
-	{{ page.header }}
-	<div class="container">
-		<!-- Highlighted Section -->
-		{% if page.highlighted %}
-			<div class="row my-4">
-				<div class="col">
-					<div class="p-4 bg-light border rounded shadow-sm">
-						{{ page.highlighted }}
+	{% if page.header %}
+		{{ page.header }}
+	{% endif %}
+
+	{% if page.navbar %}
+		{{ page.navbar }}
+	{% endif %}
+
+	{% block slider %}
+		<!-- Placeholder for slider, can be overridden -->
+	{% endblock %}
+
+	{% block content %}
+		<div
+			class="container">
+			<!-- Highlighted Section -->
+			{% if page.highlighted %}
+				<div class="row my-4">
+					<div class="col">
+						<div class="p-4 bg-light border rounded shadow-sm">
+							{{ page.highlighted }}
+						</div>
 					</div>
 				</div>
-			</div>
-		{% endif %}
+			{% endif %}
 
-		{{ page.content }}
+			{{ page.content }}
 
-	</div>
-	<!-- Footer Section -->
-	{{ page.footer }}
+		</div>
+	{% endblock %}
+
+	{% block footer %}
+		<footer>
+			{{ page.footer }}
+		</footer>
+	{% endblock %}
 </div>

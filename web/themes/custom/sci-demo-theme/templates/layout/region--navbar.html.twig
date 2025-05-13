@@ -1,38 +1,33 @@
 <!-- Start Navigation -->
 <nav class="navbar navbar-default navbar-sticky bootsnav">
+    <div class="container-full d-flex align-items-center justify-content-between">
+        <!-- Start Header Navigation -->
+        <div class="navbar-header d-flex align-items-center">
+            <button type="button" class="navbar-toggle" title="Navbar Toggle" data-toggle="collapse" data-target="#navbar-menu">
+                <i class="fa fa-bars"></i>
+            </button>
+            <a href="{{ base_path }}">
+                <img src="{{ directory }}/assets/img/logo-hibiscus.png" class="logo" alt="Logo">
+            </a>
+        </div>
+        <!-- End Header Navigation -->
 
-	<div
-		class="container-full">
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="navbar-menu">
+            {{content}}
+        </div>
 
-		<!-- Start Atribute Navigation -->
-		<div class="attr-nav border-less">
-			<ul>
-				<li class="button">
-					<a href="#">
-						<i class="fas fa-heart"></i>
-						Donate</a>
-				</li>
-			</ul>
-		</div>
-		<!-- End Atribute Navigation -->
-
-		<!-- Start Header Navigation -->
-		<div class="navbar-header">
-			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
-				<i class="fa fa-bars"></i>
-			</button>
-			<a class="navbar-brand" href="{{ path('<front>') }}">
-				<img src="{{ directory }}/assets/img/logo-hibiscus.png" class="logo" alt="Logo">
-			</a>
-		</div>
-		<!-- End Header Navigation -->
-
-		<!-- Collect the nav links, forms, and other content for toggling -->
-		<div class="collapse navbar-collapse" id="navbar-menu">
-			{{content}}
-		</div>
-		<!-- /.navbar-collapse -->
-	</div>
-
+        <!-- Start Atribute Navigation -->
+        <div class="attr-nav border-less">
+            <ul class="d-flex align-items-center">
+                <li class="button">
+                    <a href="#">
+                        <i class="fas fa-heart"></i> Donate
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- End Atribute Navigation -->
+    </div>
 </nav>
 <!-- End Navigation -->
