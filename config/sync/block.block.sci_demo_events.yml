@@ -1,0 +1,30 @@
+uuid: 9e9b437f-f111-4388-982e-434928ec29e1
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:9c5df14a-bcf5-4250-bed9-98930f15d4d2'
+  module:
+    - block_content
+    - system
+  theme:
+    - sci_demo
+id: sci_demo_events
+theme: sci_demo
+region: content
+weight: -7
+provider: null
+plugin: 'block_content:9c5df14a-bcf5-4250-bed9-98930f15d4d2'
+settings:
+  id: 'block_content:9c5df14a-bcf5-4250-bed9-98930f15d4d2'
+  label: Events
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

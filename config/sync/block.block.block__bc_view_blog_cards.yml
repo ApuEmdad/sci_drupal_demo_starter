@@ -1,0 +1,29 @@
+uuid: 43f52315-04d3-478c-91b1-0c254690dad5
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.bc_view
+  module:
+    - system
+    - views
+  theme:
+    - sci_demo
+id: block__bc_view_blog_cards
+theme: sci_demo
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:bc_view-blog_cards'
+settings:
+  id: 'views_block:bc_view-blog_cards'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /blogs

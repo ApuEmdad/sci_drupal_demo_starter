@@ -1,0 +1,23 @@
+uuid: 844014d4-0035-4029-9568-abf1a16c1605
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_donation_goall_usd
+    - node.type.donation
+id: node.donation.field_donation_goall_usd
+field_name: field_donation_goall_usd
+entity_type: node
+bundle: donation
+label: 'Donation Goal (USD)'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: $
+  suffix: ''
+field_type: integer

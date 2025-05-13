@@ -1,0 +1,30 @@
+uuid: e9eef147-a211-4e4c-8b0f-9588308fac90
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:bff10bd2-f119-42c4-93f4-71b3108639bb'
+  module:
+    - block_content
+    - system
+  theme:
+    - sci_demo
+id: sci_demo_donationform
+theme: sci_demo
+region: content
+weight: -9
+provider: null
+plugin: 'block_content:bff10bd2-f119-42c4-93f4-71b3108639bb'
+settings:
+  id: 'block_content:bff10bd2-f119-42c4-93f4-71b3108639bb'
+  label: 'Donation Form'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

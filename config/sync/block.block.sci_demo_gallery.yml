@@ -1,0 +1,30 @@
+uuid: 840775dc-b115-4e2f-83f2-68449756780d
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:05633182-484b-426d-8c22-2708e3345662'
+  module:
+    - block_content
+    - system
+  theme:
+    - sci_demo
+id: sci_demo_gallery
+theme: sci_demo
+region: content
+weight: 3
+provider: null
+plugin: 'block_content:05633182-484b-426d-8c22-2708e3345662'
+settings:
+  id: 'block_content:05633182-484b-426d-8c22-2708e3345662'
+  label: Gallery
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

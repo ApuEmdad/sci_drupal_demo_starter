@@ -1,0 +1,27 @@
+uuid: ecf60f40-c2a5-4fbf-9bc9-c0931392278a
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - sci_demo
+id: sci_demo_donorform
+theme: sci_demo
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:3436d871-eecd-4003-ab06-c1ca170b198d'
+settings:
+  id: 'block_content:3436d871-eecd-4003-ab06-c1ca170b198d'
+  label: 'Donor Form'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/donor-form/*'

@@ -1,0 +1,69 @@
+uuid: fc4012a0-f16b-4b1e-997f-316c0c4e4b4c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.donation.field_donation_cover_image
+    - field.field.node.donation.field_donation_description
+    - field.field.node.donation.field_donation_goall_usd
+    - field.field.node.donation.field_donation_title
+    - field.field.node.donation.field_location
+    - node.type.donation
+  module:
+    - image
+    - text
+    - user
+id: node.donation.default
+targetEntityType: node
+bundle: donation
+mode: default
+content:
+  field_donation_cover_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_donation_description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_donation_goall_usd:
+    type: number_integer
+    label: hidden
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_donation_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_location:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

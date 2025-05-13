@@ -1,0 +1,21 @@
+uuid: 8d729bb9-299a-4414-b24b-d3f6b7a8f09b
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_donation_title
+field_name: field_donation_title
+entity_type: node
+type: string
+settings:
+  max_length: 120
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

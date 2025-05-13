@@ -1,0 +1,19 @@
+uuid: 8e38d107-02f8-4802-92c3-990e835f4878
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_location
+    - node.type.donation
+id: node.donation.field_location
+field_name: field_location
+entity_type: node
+bundle: donation
+label: Location
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

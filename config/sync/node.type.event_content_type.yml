@@ -1,0 +1,18 @@
+uuid: ef71d726-41c8-43ca-bdb2-fac2ec37db23
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Event Content Type'
+type: event_content_type
+description: 'Event Contents will be stored in this type'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

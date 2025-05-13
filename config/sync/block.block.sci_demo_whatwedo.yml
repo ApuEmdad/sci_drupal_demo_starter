@@ -1,0 +1,30 @@
+uuid: ca5a5ed3-7043-4aa5-8d3d-ae8699fc4824
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:d35cf5e8-6699-48c4-94a8-4f7b1d31c181'
+  module:
+    - block_content
+    - system
+  theme:
+    - sci_demo
+id: sci_demo_whatwedo
+theme: sci_demo
+region: content
+weight: -11
+provider: null
+plugin: 'block_content:d35cf5e8-6699-48c4-94a8-4f7b1d31c181'
+settings:
+  id: 'block_content:d35cf5e8-6699-48c4-94a8-4f7b1d31c181'
+  label: 'What We Do'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "<front>\r\n/about-us\r\n/our-mission"

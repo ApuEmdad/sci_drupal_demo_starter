@@ -1,0 +1,28 @@
+uuid: 6e0667d8-604e-4301-b2ad-543b2dd3435d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.blogs.field_blog_author
+    - field.field.node.blogs.field_blog_cover_image
+    - field.field.node.blogs.field_blog_description
+    - field.field.node.blogs.field_blog_title
+    - node.type.blogs
+  module:
+    - user
+id: node.blogs.teaser
+targetEntityType: node
+bundle: blogs
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_blog_author: true
+  field_blog_cover_image: true
+  field_blog_description: true
+  field_blog_title: true

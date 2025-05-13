@@ -1,0 +1,19 @@
+uuid: 5fcd84f4-dd4f-45c2-a759-8e91d1238fde
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_donation_title
+    - node.type.donation
+id: node.donation.field_donation_title
+field_name: field_donation_title
+entity_type: node
+bundle: donation
+label: 'Donation Title'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

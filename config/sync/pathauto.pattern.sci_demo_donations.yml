@@ -1,0 +1,22 @@
+uuid: af8e002c-d27e-4bce-815b-234b90d856b0
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: sci_demo_donations
+label: sci-demo-donations
+type: 'canonical_entities:node'
+pattern: 'donations/donation/[node:nid]'
+selection_criteria:
+  8cbbd772-a1e3-4211-8e8d-9eddcaa8bb1b:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 8cbbd772-a1e3-4211-8e8d-9eddcaa8bb1b
+    context_mapping:
+      node: node
+    bundles:
+      donation: donation
+selection_logic: and
+weight: -5
+relationships: {  }

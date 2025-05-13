@@ -1,0 +1,30 @@
+uuid: ce44cce2-d0a8-42ee-ae3e-fafa4869fff7
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:027ce86b-5d42-458a-851f-c4138f77ab94'
+  module:
+    - block_content
+    - system
+  theme:
+    - sci_demo
+id: sci_demo_funfactor
+theme: sci_demo
+region: content
+weight: 2
+provider: null
+plugin: 'block_content:027ce86b-5d42-458a-851f-c4138f77ab94'
+settings:
+  id: 'block_content:027ce86b-5d42-458a-851f-c4138f77ab94'
+  label: 'Fun Factor'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/about-us\r\n/our-mission"

@@ -1,0 +1,30 @@
+uuid: 75aad1d2-dacd-438e-abab-7b06eaa1cfdb
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:28921738-f3f3-46a5-b042-a6f7ecf6a019'
+  module:
+    - block_content
+    - system
+  theme:
+    - sci_demo
+id: sci_demo_becomeavolunteer
+theme: sci_demo
+region: content
+weight: -8
+provider: null
+plugin: 'block_content:28921738-f3f3-46a5-b042-a6f7ecf6a019'
+settings:
+  id: 'block_content:28921738-f3f3-46a5-b042-a6f7ecf6a019'
+  label: 'Become A Volunteer'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

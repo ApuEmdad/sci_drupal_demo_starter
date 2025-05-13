@@ -1,0 +1,30 @@
+uuid: f9ca7b65-7686-4fc0-89a4-d1f9652258f9
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:f8172eb0-3272-489d-b904-f7d974706bc9'
+  module:
+    - block_content
+    - system
+  theme:
+    - sci_demo
+id: sci_demo_pagination
+theme: sci_demo
+region: content
+weight: 5
+provider: null
+plugin: 'block_content:f8172eb0-3272-489d-b904-f7d974706bc9'
+settings:
+  id: 'block_content:f8172eb0-3272-489d-b904-f7d974706bc9'
+  label: Pagination
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /blogs

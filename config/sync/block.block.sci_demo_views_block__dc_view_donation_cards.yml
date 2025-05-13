@@ -1,0 +1,29 @@
+uuid: beea8a1e-eb28-40c1-a53c-bd4aa0c18210
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.dc_view
+  module:
+    - system
+    - views
+  theme:
+    - sci_demo
+id: sci_demo_views_block__dc_view_donation_cards
+theme: sci_demo
+region: content
+weight: -4
+provider: null
+plugin: 'views_block:dc_view-donation_cards'
+settings:
+  id: 'views_block:dc_view-donation_cards'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /donations

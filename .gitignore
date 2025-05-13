@@ -64,3 +64,6 @@
 .vscode/
 /.editorconfig
 /.gitattributes
+
+!config/
+!config/sync/
