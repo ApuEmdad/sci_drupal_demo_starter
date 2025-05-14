@@ -66,3 +66,19 @@ php -S localhost:8888 .ht.router.php
 ```
 
 Starts the server in `http://localhost:8888/`.
+
+## Running Drush
+Use the Composer script to run Drush:
+
+```
+composer drush <command>
+```
+
+### Examples:
+
+```
+composer drush cr         # Clear cache
+composer drush status     # Show Drupal status
+composer drush cex        # export to sync folder
+composer drush cim        # import from sync folder
+```

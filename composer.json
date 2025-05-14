@@ -99,5 +99,8 @@
                 "      composer remove drupal/core-project-message"
             ]
         }
+    },
+    "scripts": {
+        "drush": "vendor/bin/drush"
     }
 }
