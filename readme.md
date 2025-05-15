@@ -39,11 +39,17 @@ composer require drupal/pathauto:^1.13
 
 ## Installation from GitHub
 
+Copy the example env file and make the required configuration changes in the .env file
+
+    cp web\sites\default\settings.example.php web\sites\default\settings.php
+
 Clone the repository and run the following commands in your root directory:
 
 ```
 composer install
 ```
+
+
 
 ```
 yarn
