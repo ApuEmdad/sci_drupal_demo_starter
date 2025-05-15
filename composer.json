@@ -17,14 +17,17 @@
     "require": {
         "composer/installers": "^2.0",
         "drupal/admin_toolbar": "3.4",
+        "drupal/admin_toolbar_tools": "^3.5",
         "drupal/core-composer-scaffold": "^10.3",
         "drupal/core-project-message": "^10.3",
         "drupal/core-recommended": "^10.3",
+        "drupal/ctools": "^4.1",
         "drupal/devel": "5.2",
         "drupal/easy_breadcrumb": "*",
         "drupal/pathauto": "1.13",
         "drupal/simplelogin": "7.1",
-        "drupal/superfish": "^1.8",
+        "drupal/superfish": "1.12",
+        "drupal/token": "^1.15",
         "drush/drush": "^12.5"
     },
     "conflict": {
