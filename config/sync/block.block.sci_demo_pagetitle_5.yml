@@ -9,7 +9,7 @@ dependencies:
 id: sci_demo_pagetitle_5
 theme: sci_demo
 region: header
-weight: -16
+weight: -14
 provider: null
 plugin: page_title_block
 settings:

@@ -10,8 +10,8 @@ dependencies:
     - sci_demo
 id: sci_demo_mainnavigation_2
 theme: sci_demo
-region: navbar
-weight: -17
+region: header
+weight: -12
 provider: null
 plugin: 'superfish:main'
 settings:

@@ -11,7 +11,7 @@ dependencies:
 id: sci_demo_emptyblock
 theme: sci_demo
 region: header
-weight: -18
+weight: -16
 provider: null
 plugin: 'block_content:05ab37ad-48aa-4be6-9c0e-881b9143e167'
 settings:

@@ -2,7 +2,10 @@ uuid: b1b621fd-b17f-4289-a821-85abffef0179
 langcode: en
 status: true
 dependencies:
+  content:
+    - 'block_content:basic:4f177ce0-1570-4fd1-9e68-cf5eeab1fc45'
   module:
+    - block_content
     - system
   theme:
     - sci_demo

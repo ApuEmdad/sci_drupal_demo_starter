@@ -1,20 +1,20 @@
-uuid: ddbe0d2e-7a56-439d-ad6c-7c4e964b9b07
+uuid: 35738a2c-83b3-4fe3-a331-bf2174e4b9de
 langcode: en
 status: true
 dependencies:
   theme:
     - sci_demo
-id: sci_demo_tabs
+id: sci_demo_primary_local_tasks
 theme: sci_demo
 region: highlighted
-weight: 0
+weight: -4
 provider: null
 plugin: local_tasks_block
 settings:
   id: local_tasks_block
-  label: Tabs
+  label: 'Primary tabs'
   label_display: '0'
   provider: core
   primary: true
-  secondary: true
+  secondary: false
 visibility: {  }

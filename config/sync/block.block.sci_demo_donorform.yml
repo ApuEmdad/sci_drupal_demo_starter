@@ -2,7 +2,10 @@ uuid: ecf60f40-c2a5-4fbf-9bc9-c0931392278a
 langcode: en
 status: true
 dependencies:
+  content:
+    - 'block_content:basic:3436d871-eecd-4003-ab06-c1ca170b198d'
   module:
+    - block_content
     - system
   theme:
     - sci_demo

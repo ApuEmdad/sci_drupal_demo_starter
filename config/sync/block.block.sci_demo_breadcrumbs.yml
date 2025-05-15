@@ -9,7 +9,7 @@ dependencies:
 id: sci_demo_breadcrumbs
 theme: sci_demo
 region: banner
-weight: -14
+weight: -16
 provider: null
 plugin: system_breadcrumb_block
 settings:

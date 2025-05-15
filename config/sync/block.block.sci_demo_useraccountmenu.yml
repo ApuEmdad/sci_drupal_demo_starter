@@ -1,6 +1,6 @@
 uuid: deb4b56f-3316-436d-8fd3-775dd380b27c
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.account
@@ -11,7 +11,7 @@ dependencies:
 id: sci_demo_useraccountmenu
 theme: sci_demo
 region: header
-weight: -17
+weight: -15
 provider: null
 plugin: 'system_menu_block:account'
 settings:
