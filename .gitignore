@@ -9,61 +9,62 @@
 # /web/sites/*/*settings*.php
 # /web/sites/*/*services*.yml
 
-# Ignore paths that may contain user-generated content
-/web/sites/*/files
-/web/sites/*/public
-/web/sites/*/private
-/web/sites/*/files-public
-/web/sites/*/files-private
+# Ignore sensitive settings files
+/web/sites/*/*settings*.php
+/web/sites/*/*services*.yml
 
-# Ignore paths that may contain temporary files
+# Ignore user-generated content
+/web/sites/*/files
+/web/sites/*/private
+/web/sites/*/public
+/web/sites/*/files-*
+
+# Ignore temporary and translation files
 /web/sites/*/translations
 /web/sites/*/tmp
 /web/sites/*/cache
 
-# Ignore drupal core (if not versioning drupal sources)
-/web/vendor
-/web/core
-/web/modules/README.txt
-/web/profiles/README.txt
-/web/sites/development.services.yml
-/web/sites/default/settings.php
-/web/sites/example.sites.php
-/web/sites/README.txt
-/web/themes/README.txt
+# Ignore contributed modules, themes, and libraries
+/web/modules/contrib/
+/web/themes/contrib/
+/web/profiles/contrib/
+/web/libraries/
+
+# Ignore core files if not versioned
+/web/core/
+/web/vendor/
+
+# Ignore scaffolding files
+/web/autoload.php
+/web/composer.*
+/web/index.php
+/web/robots.txt
+/web/update.php
+/web/web.config
+/web/.htaccess
 /web/.csslintrc
 /web/.editorconfig
 /web/.eslintignore
 /web/.eslintrc.json
-/web/.gitattributes
-/web/.htaccess
-/web/.ht.router.php
-/web/autoload.php
-/web/composer.json
-/web/composer.lock
-/web/example.gitignore
-/web/index.php
-/web/INSTALL.txt
-/web/LICENSE.txt
-/web/README.txt
-/web/robots.txt
-/web/update.php
-/web/web.config
 
-# Ignore vendor dependencies and scripts
-/vendor
-/composer.phar
-/composer
-/robo.phar
-/robo
-/drush.phar
-/drush
-/drupal.phar
-/drupal
+# Ignore common development tools
+/vendor/
+composer.phar
+.robo
+.robo.yml
+drush.phar
+.drush
+.drupal
 
+# IDE/editor specific
 .vscode/
-/.editorconfig
-/.gitattributes
+.idea/
+*.sublime-workspace
+*.sublime-project
 
+# Ignore settings.php explicitly
+/web/sites/default/settings.php
+
+# Keep sync configuration folder
 !config/
 !config/sync/
