@@ -47,7 +47,15 @@
         "drupal-scaffold": {
             "locations": {
                 "web-root": "web/"
-            }
+            },
+            "excludes": [
+                ".editorconfig",
+                ".gitattributes",
+                "web/README.md",
+                "web/example.gitignore",
+                "web/sites/default/default.services.yml",
+                "web/sites/example.settings.local.php"
+            ]
         },
         "installer-paths": {
             "web/core": [
