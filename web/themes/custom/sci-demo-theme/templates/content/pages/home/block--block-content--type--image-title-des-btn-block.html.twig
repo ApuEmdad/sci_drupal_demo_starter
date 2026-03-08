@@ -1,0 +1,191 @@
+<section class="competence-section default-padding">
+  <div class="container">
+    <div class="row align-items-center">
+
+      <div class="col-lg-6 col-md-12">
+        <div class="competence-image-wrapper">
+          <div class="deco deco-top-left"></div>
+          <div class="deco deco-bottom-right"></div>
+          {% if content.field_image[0] %}
+            <div class="competence-image">
+              {{ content.field_image }}
+            </div>
+          {% endif %}
+        </div>
+      </div>
+
+      <div class="col-lg-6 col-md-12">
+        <div class="competence-content">
+
+          {% if content.field_title[0]['#text'] %}
+            <h2 class="competence-title">
+              {{ content.field_title[0]['#text']|raw }}<img src="{{ directory }}/assets/img/Group7.png" alt="" class="title-icon">
+            </h2>
+          {% endif %}
+
+          {% if content.body[0]['#text'] %}
+            <div class="competence-body">
+              {{ content.body[0]['#text']|raw }}
+            </div>
+          {% endif %}
+
+          {% if content.field_btn_link[0] or content.field_btn[0] %}
+            <div class="competence-actions">
+              {% if content.field_btn[0]['#context']['value'] %}
+                <a
+                  href="{{ content.field_btn_link[0]['#url'] ?? '#' }}"
+                  class="btn-competence"
+                >
+                  {{ content.field_btn[0]['#context']['value'] }}
+                  <span class="btn-arrow">→</span>
+                </a>
+              {% endif %}
+            </div>
+          {% endif %}
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+
+
+/* ── Image column ──────────────────────────────────────── */
+
+
+/* Decorative squiggle lines (CSS-drawn, matching screenshot) */
+.deco {
+  position: absolute;
+  width: 90px;
+  height: 38px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 2;
+}
+
+.deco-top-left {
+  top: -22px;
+  left: 50px;
+  background-image: url("{{ directory }}/assets/img/deco-img.png");
+}
+
+.deco-bottom-right {
+  bottom: 50px;
+  right: -50px;
+  background-image: url("{{ directory }}/assets/img/deco-img.png");
+ 
+}
+
+/* ── Text column ───────────────────────────────────────── */
+.competence-content {
+  padding-left: 48px;
+}
+.competence-image {
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.08);
+}
+
+.competence-image img {
+  width: 593px;
+  height: 500px;
+  display: block;
+}
+.competence-title {
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+}
+.title-icon {
+  width: 27px;
+  height: 20px;
+  display: inline-block;
+  vertical-align: text-top;
+  margin: 0;
+  margin-left: -5px;
+}
+
+.competence-body {
+  font-size: 15px;
+  line-height: 1.75;
+  color: #444;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+/* Highlight coloured spans that Drupal body text may contain */
+.competence-body a,
+.competence-body .highlight-teal  { color: #0097A7; text-decoration: none; }
+.competence-body .highlight-coral { color: #E53935; }
+
+/* ── CTA button ────────────────────────────────────────── */
+.competence-actions {
+  margin-top: 10px;
+}
+
+.btn-competence {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 26px;
+  background: #D81B4A;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.25s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  letter-spacing: 0.02em;
+}
+
+.btn-competence:hover {
+  background: #b5133b;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(216, 27, 74, 0.3);
+  color: #fff;
+}
+
+.btn-arrow {
+  font-size: 16px;
+  transition: transform 0.2s ease;
+}
+
+.btn-competence:hover .btn-arrow {
+  transform: translateX(4px);
+}
+
+/* ── Responsive ────────────────────────────────────────── */
+@media (max-width: 991px) {
+  .competence-section {
+    padding: 60px 0;
+    text-align: center;
+  }
+
+  .competence-content {
+    padding-left: 0;
+    margin-top: 40px;
+  }
+
+  .competence-title {
+    font-size: 28px;
+  }
+
+  .competence-body {
+    text-align: left;
+  }
+
+  .competence-image img {
+    max-width: 100%;
+  }
+
+  .competence-actions {
+    display: flex;
+    justify-content: center;
+  }
+}
+</style>

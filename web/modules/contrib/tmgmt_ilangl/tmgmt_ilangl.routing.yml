@@ -1,0 +1,7 @@
+tmgmt_ilangl.abort_form:
+  path: '/abort-form'
+  defaults:
+    _form: '\Drupal\tmgmt_ilangl\Form\AbortJobItemForm'
+    _title: 'Abort Job Item'
+  requirements:
+    _permission: 'access content'

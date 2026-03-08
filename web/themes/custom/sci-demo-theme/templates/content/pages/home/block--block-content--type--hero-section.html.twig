@@ -1,0 +1,129 @@
+<section class="hero-section default-padding">
+  <div class="container">
+    <div class="row align-items-center">
+
+      <div class="col-lg-7 col-md-12">
+        <div class="hero-content">
+
+          {% if content.field_hero_title[0]['#text'] %}
+            {% set title = content.field_hero_title[0]['#text'] %}
+            {% set parts = title|split('<br>') %}
+            <h1 class="hero-title">
+              {% for part in parts %}
+                {% if loop.index0 == 0 %}
+                  {{ part|raw }}<img src="{{ directory }}/assets/img/Group7.png" alt="" class="htitle-icon">
+                {% else %}
+                  <br>{{ part|raw }}
+                {% endif %}
+              {% endfor %}
+            </h1>
+          {% endif %}
+
+          {% if content.body[0]['#text'] %}
+            <p>{{ content.body[0]['#text']|raw }}</p>
+          {% endif %}
+
+          <div class="hero-buttons">
+
+            {% if content.field_button_link[0] %}
+              <a href="{{ content.field_button_link[0]['#url'] }}" class="btn btn-primary">
+                {{ content.field_button_text[0]['#context']['value'] ?: 'Explore Resources' }} →
+              </a>
+            {% endif %}
+
+            {% if content.field_button_2[0]['#context']['value'] %}
+              <a href="#" class="btn btn-secondary">
+                {{ content.field_button_2[0]['#context']['value'] }} →
+              </a>
+            {% endif %}
+
+            {% if content.field_button_3[0]['#context']['value'] %}
+              <a href="#" class="btn btn-tertiary">
+                {{ content.field_button_3[0]['#context']['value'] }} →
+              </a>
+            {% endif %}
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-5 col-md-12">
+        <div class="hero-image text-center">
+          {{ content.field_hero_image }}
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+.hero-section {
+  padding: 80px 0;
+
+}
+.hero-title {
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 1.15;
+  color: #222;
+  margin-bottom: 25px;
+}
+.htitle-icon {
+  width: 27px;
+  height: 20px;
+  display: inline-block;
+  vertical-align: text-top;
+  margin: 0;
+  margin-left: -20px;
+}
+.hero-content p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 35px;
+  max-width: 520px;
+}
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+.hero-buttons a {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.hero-buttons a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+.btn-primary   { background: #D81B4A !important; }
+.btn-secondary { background: #1A7A8C !important; }
+.btn-tertiary  { background: #6A5B8A !important; }
+.hero-image img {
+  max-width: 480px;
+  width: 100%;
+  height: auto;
+}
+@media (max-width: 991px) {
+  .hero-section {
+    text-align: center;
+    padding: 70px 0;
+  }
+  .hero-title {
+    font-size: 36px;
+  }
+  .hero-buttons {
+    justify-content: center;
+  }
+  .hero-image {
+    margin-top: 40px;
+  }
+}
+</style>

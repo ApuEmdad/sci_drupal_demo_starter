@@ -1,0 +1,13 @@
+name: 'iLangL Translator'
+type: module
+description: 'The iLangL translator module that integrates with the Translation Management Tool.'
+package: 'Translation Management'
+core_version_requirement: ^8 || ^9 || ^10
+dependencies:
+  - drupal:tmgmt
+  - drupal:tmgmt_file
+
+# Information added by Drupal.org packaging script on 2023-11-21
+version: '8.x-2.3'
+project: 'tmgmt_ilangl'
+datestamp: 1700562593

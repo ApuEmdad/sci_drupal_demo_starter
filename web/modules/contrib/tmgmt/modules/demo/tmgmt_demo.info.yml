@@ -1,0 +1,29 @@
+name: Translation Management Demo
+type: module
+description: All elements for a functioning demo.
+package: Translation Management
+core_version_requirement: ^10.2 || ^11
+hidden: false
+
+dependencies:
+ - tmgmt:tmgmt
+ - tmgmt:tmgmt_locale
+ - tmgmt:tmgmt_content
+ - tmgmt:tmgmt_file
+ - tmgmt:tmgmt_local
+ - drupal:views
+ - drupal:path
+ - drupal:text
+ - drupal:menu_ui
+ - drupal:toolbar
+ - drupal:editor
+
+simplytest_dependencies:
+ - paragraphs:paragraphs_demo
+
+#@todo add the google_chart_tools dependancy
+
+# Information added by Drupal.org packaging script on 2026-01-12
+version: '8.x-1.18'
+project: 'tmgmt'
+datestamp: 1768203323

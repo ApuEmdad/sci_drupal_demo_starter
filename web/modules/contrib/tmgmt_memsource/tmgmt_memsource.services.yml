@@ -1,0 +1,7 @@
+
+services:
+  memsource.cron_task:
+    class: Drupal\tmgmt_memsource\Cron\PullTranslationsTask
+    arguments: ['@queue', '@state']
+    tags:
+      - { name: cron }

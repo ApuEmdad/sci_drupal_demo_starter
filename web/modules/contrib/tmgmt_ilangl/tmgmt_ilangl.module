@@ -1,0 +1,232 @@
+<?php
+
+/**
+ * @file
+ * Main module file for the iLangL Translation Management module.
+ */
+
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Link;
+use Drupal\tmgmt\Entity\RemoteMapping;
+use Drupal\tmgmt\Entity\Translator;
+use Drupal\Component\Serialization\Json;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\StringTranslation\TranslatableMarkup;
+use Drupal\Core\Url;
+use Drupal\tmgmt\Entity\JobItem;
+use Drupal\tmgmt\JobItemInterface;
+use Drupal\tmgmt\TMGMTException;
+use Drupal\tmgmt_ilangl\Plugin\tmgmt\Translator\ILangLTranslator;
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function tmgmt_ilangl_form_tmgmt_translator_edit_form_alter(&$form): void {
+  $form['plugin_wrapper']['remote_languages_mappings']['#access'] = FALSE;
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function tmgmt_ilangl_form_tmgmt_translator_add_form_alter(&$form, FormStateInterface $form_state): void {
+  if ($form_state->getValue('plugin') === 'ilangl') {
+    $form['plugin_wrapper']['remote_languages_mappings']['#access'] = FALSE;
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function tmgmt_ilangl_form_tmgmt_job_item_abort_form_alter(&$form): void {
+  $description = new TranslatableMarkup('Aborted job items can no longer be accepted.');
+  $form['description']['#markup'] = $description;
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function tmgmt_ilangl_form_tmgmt_job_item_edit_form_alter(&$form): void {
+  $native_url = $form['actions']['abort_job_item']['#url'];
+  $tmgmt_job_item = $native_url->getRouteParameters()['tmgmt_job_item'];
+
+  $abort_form_url = Url::fromRoute('tmgmt_ilangl.abort_form', [],
+    [
+      'query' => [
+        'aborted_job_item' => $tmgmt_job_item,
+      ],
+    ]);
+
+  $actions = &$form['actions']['abort_job_item'];
+
+  $actions['#url'] = $abort_form_url;
+  $actions['#attributes']['class'][] = 'use-ajax';
+  $actions['#attributes']['data-dialog-type'] = 'modal';
+  $actions['#attributes']['data-dialog-options'] = [
+    Json::encode([
+      'width' => 1200,
+      'height' => 'auto',
+      'hide' => 'fadeOut',
+      'show' => 'fadeIn',
+      'fluid' => TRUE,
+    ]),
+  ];
+  $form['#attached']['library'][] = 'core/drupal.dialog.ajax';
+  $form['#attached']['library'][] = 'core/jquery';
+
+  // Save as completed should to remove JobItem from Downloaded JobItems List.
+  $form['actions']['accept']['#submit'][] = 'tmgmt_ilangl_change_job_item_state';
+}
+
+/**
+ * Helper method to change JobItem status.
+ */
+function tmgmt_ilangl_change_job_item_state(): void {
+
+  $job_item_id = \Drupal::routeMatch()->getRawParameter('tmgmt_job_item');
+
+  /** @var Drupal\tmgmt\JobItemInterface $job_item */
+  $job_item = JobItem::load($job_item_id);
+
+  /** @var \Drupal\tmgmt_ilangl\Plugin\tmgmt\Translator\ILangLTranslator $ilanglTranslator */
+  $ilanglTranslator = $job_item->getTranslator()->getPlugin();
+
+  $downloaded_jobs = $ilanglTranslator->getState('downloaded_jobs');
+
+  if (array_key_exists($job_item_id, $downloaded_jobs)) {
+    $ilanglTranslator->changeJobState($downloaded_jobs[$job_item_id], $job_item->getTranslator(), TRUE);
+    unset($downloaded_jobs[$job_item_id]);
+    $ilanglTranslator->setState('downloaded_jobs', $downloaded_jobs);
+  }
+}
+
+/**
+ * Implements hook_cron().
+ *
+ * @throws \Drupal\tmgmt\TMGMTException
+ */
+function tmgmt_ilangl_cron(): void {
+  // Fetching JobsItems translations automatically.
+  // Gets TMGMT configurations.
+  $tmgmt_settings = \Drupal::config('tmgmt.settings');
+
+  if ($tmgmt_settings->get('submit_job_item_on_cron')) {
+    $providers = Drupal::state()->get('providers');
+
+    if (isset($providers)) {
+      foreach ($providers as $provider) {
+        /** @var \Drupal\tmgmt\TranslatorInterface $translator */
+        $translator = Translator::load($provider);
+
+        if (empty($translator)) {
+          unset($providers[array_search($provider, $providers)]);
+          \Drupal::state()->set('providers', $providers);
+        }
+        else {
+          /** @var \Drupal\tmgmt_ilangl\Plugin\tmgmt\Translator\ILangLTranslator $ilanglTranslator */
+          $ilanglTranslator = $translator->getPlugin();
+          // Checking Provider availability.
+          $available = $ilanglTranslator->checkAvailable($translator);
+
+          if ($available->getSuccess()) {
+            // Get Jobs list available to fetching.
+            try {
+              $job_list = $ilanglTranslator->getJobList($translator);
+            }
+            catch (TMGMTException $e) {
+              $message = t('Provider @provider Error: @error', [
+                '@error' => $e,
+                '@provider' => $translator->label(),
+              ]);
+              \Drupal::messenger()->addError($message);
+              \Drupal::logger('tmgmt_ilangl')->error($message);
+              continue;
+            }
+
+            if (isset($job_list) && !empty($job_list['Jobs'])) {
+
+              foreach ($job_list['Jobs'] as $remote_id) {
+                $remote_mapping = RemoteMapping::loadByRemoteIdentifier(NULL, NULL, $remote_id);
+
+                if (!empty($remote_mapping) && reset($remote_mapping) instanceof RemoteMapping) {
+                  /** @var Drupal\tmgmt\JobItemInterface $job_item */
+                  $job_item = reset($remote_mapping)->getJobItem();
+
+                  if (!isset($job_item)) {
+                    $ilanglTranslator->changeJobState($remote_id, $translator);
+                  }
+                  else {
+
+                    if (!$job_item->isAccepted()) {
+                      $ilanglTranslator->setState('isCron', [ILangLTranslator::IS_ACTIVE]);
+                      $ilanglTranslator->fetchTranslation($job_item);
+                      $ilanglTranslator->changeJobState($remote_id, $translator);
+                      $ilanglTranslator->setState('isCron', [ILangLTranslator::IS_INACTIVE]);
+                    }
+                    else {
+                      $job_item->setState(JobItemInterface::STATE_INACTIVE);
+                      continue;
+                    }
+                  }
+                }
+                else {
+                  $ilanglTranslator->changeJobState($remote_id, $translator);
+                  $message = t("JobItem @remote_id doesn't exists", ['@remote_id' => $remote_id]);
+                  \Drupal::messenger()->addError($message);
+                  \Drupal::logger('tmgmt_ilangl')->error($message);
+                }
+              }
+            }
+            else {
+              $message = t('All available Jobs translations for provider: @provider is fetched', ['@provider' => $translator->label()]);
+              \Drupal::messenger()->addStatus($message);
+              \Drupal::logger('tmgmt_ilangl')->info($message);
+            }
+          }
+          else {
+            $message = t('Provider @translator is not available', ['@translator' => $translator->label()]);
+            \Drupal::messenger()->addError($message);
+            \Drupal::logger('tmgmt_ilangl')->error($message);
+          }
+        }
+      }
+    }
+    else {
+      $options = [
+        'attributes' => [
+          'target' => '_blank',
+        ],
+      ];
+      $url = Url::fromRoute('entity.tmgmt_translator.collection', [], $options);
+      $link = Link::fromTextAndUrl(t('Providers'), $url);
+      $providers_page = $link->toString();
+      $message = t('No Provider is customized with the iLangl provider plugin. Check, please, your %providers_page setup', [
+        '%providers_page' => $providers_page,
+      ]);
+
+      \Drupal::messenger()->addError($message);
+      \Drupal::logger('tmgmt_ilangl')->error($message);
+    }
+  }
+}
+
+/**
+ * Implements hook_entity_presave().
+ */
+function tmgmt_ilangl_entity_presave(EntityInterface $entity) {
+  if ($entity instanceof Translator) {
+
+    if ($entity->getPluginId() === 'ilangl') {
+      $entity->setSettings([]);
+
+      $providers = Drupal::state()->get('providers');
+
+      if (is_array($providers)) {
+
+        if (!in_array($entity->id(), $providers) || empty($providers)) {
+          $providers[] = $entity->id();
+          Drupal::state()->set('providers', $providers);
+        }
+      }
+    }
+  }
+}

@@ -187,12 +187,12 @@ a:active,
 a:focus,
 a:hover {
   outline: none;
-  text-decoration: none;
-  color: #232323;
+  text-decoration: underline;
+  color: #E01A4F;
 }
 
 a:hover {
-  color: #232323;
+  color: #E01A4F;
 }
 
 a {
@@ -891,7 +891,7 @@ header {
 }
 
 header nav.navbar.border.bootsnav.navbar-fixed.no-background {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 5px solid linear-gradient(90deg, #E01A4F 0%, #F9C22E 22.12%, #A6BB7D 41.83%, #F15946 65.38%, #AE90C3 84.13%, #F6B0BD 100%);
 }
 
 header nav.navbar.border.bootsnav.navbar-fixed.no-background ul li a {

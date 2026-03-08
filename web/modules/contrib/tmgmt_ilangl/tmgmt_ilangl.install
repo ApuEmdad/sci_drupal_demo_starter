@@ -1,0 +1,36 @@
+<?php
+
+/**
+ * @file
+ * Contains install and update functions for the iLangL module.
+ */
+
+/**
+ * Implements hook_uninstall().
+ */
+function tmgmt_ilangl_install() {
+  // Set default provider to the Drupal States.
+  $providers[] = 'ilangl';
+  \Drupal::state()->set('providers', $providers);
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function tmgmt_ilangl_uninstall($is_syncing): void {
+  // Remove tmgmt_ilangl_cron configurations.
+  \Drupal::configFactory()
+    ->getEditable('ultimate_cron.job.tmgmt_ilangl_cron')
+    ->delete();
+  // Remove tmgmt_ilangl Downloaded JobItems State.
+  \Drupal::state()->delete('ilangl__downloaded_jobs');
+
+  // Remove ilang providers and their data.
+  $prodiders = \Drupal::state()->get('providers');
+
+  foreach ($prodiders as $prodider) {
+    \Drupal::state()->delete(sprintf('ilangl_%s_%s', $prodider, 'provider_data'));
+  }
+
+  \Drupal::state()->delete('providers');
+}

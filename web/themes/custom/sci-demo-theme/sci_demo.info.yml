@@ -8,7 +8,7 @@ base theme: false
 libraries:
   - sci_demo/global-styling
 regions:
-  header: "Header"
+  # header: "Header"
   navbar: "Navigation"
   banner: "Banner"
   slider: "Slider"

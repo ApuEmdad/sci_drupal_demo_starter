@@ -1,0 +1,16 @@
+name: Phrase TMS Translator
+type: module
+description: 'Localize Drupal websites with the help of professional translation tools.'
+package: Translation Management
+author: Phrase
+core: 8.x
+core_version_requirement: ^8 || ^9 || ^10 || ^11
+dependencies:
+  - drupal:tmgmt
+  - drupal:tmgmt_file
+configure: entity.tmgmt_translator.collection
+
+# Information added by Drupal.org packaging script on 2025-12-17
+version: '8.x-1.27'
+project: 'tmgmt_memsource'
+datestamp: 1765977619

@@ -1,0 +1,12 @@
+tmgmt.translator.settings.libretranslate:
+  type: mapping
+  mapping:
+    url:
+      type: string
+      label: Remote URL
+    api_url:
+      type: string
+      label: API URL
+    api_key:
+      type: string
+      label: API key

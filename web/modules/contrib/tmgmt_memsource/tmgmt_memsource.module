@@ -1,0 +1,17 @@
+<?php
+
+/**
+ * @file
+ * A description of what your module does.
+ */
+
+/**
+ * Implements hook_cron()
+ */
+function tmgmt_memsource_cron() {
+  // Melo by se spravne spoustet samo, jako tag: cron,
+  // ale nejede to, tak si musime run cron tasku takto vynutit.
+  if (\Drupal::getContainer()->has("memsource.cron_task")) {
+    \Drupal::getContainer()->get("memsource.cron_task")->run();
+  }
+}

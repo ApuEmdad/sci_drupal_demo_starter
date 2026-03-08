@@ -1,0 +1,13 @@
+name: 'LibreTranslate Translator'
+description: 'TMGMT implementation of libreTranslate Service.'
+package: 'Translation Management'
+core_version_requirement: ^9 || ^10 || ^11
+dependencies:
+  - tmgmt
+configure: entity.tmgmt_translator.collection
+type: module
+
+# Information added by Drupal.org packaging script on 2024-05-13
+version: '1.0.0'
+project: 'tmgmt_libretranslate'
+datestamp: 1715619394

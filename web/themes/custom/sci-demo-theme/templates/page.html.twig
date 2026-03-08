@@ -1,28 +1,85 @@
 <div class="hibiscus">
-	{% if page.header %}
-		{{ page.header }}
-	{% endif %}
 
-	{% if page.navbar %}
-		{{ page.navbar }}
-	{% endif %}
+    <div class="bubble-layer" aria-hidden="true">
+        <span class="bubble"></span>
+        <span class="bubble"></span>
+        <span class="bubble"></span>
+        <span class="bubble"></span>
+        <span class="bubble"></span>
+        <span class="bubble"></span>
+        <span class="bubble"></span>
+        <span class="bubble"></span>
+        <span class="bubble"></span>
+        <span class="bubble"></span>
+        <span class="bubble"></span>
+    </div>
 
-	{% block slider %}
-		<!-- Placeholder for slider, can be overridden -->
-	{% endblock %}
+    {% if page.header %}
+        {{ page.header }}
+    {% endif %}
 
-	{% block content %}
-		<div
-			class="container">
+    {% if page.navbar %}
+        {{ page.navbar }}
+    {% endif %}
 
-			{{ page.content }}
+    {% block slider %}{% endblock %}
 
-		</div>
-	{% endblock %}
+    {% block content %}
+        <div class="container">
+            {{ page.content }}
+        </div>
+    {% endblock %}
 
-	{% block footer %}
-		<footer>
-			{{ page.footer }}
-		</footer>
-	{% endblock %}
+    {% block footer %}
+        <footer>
+            {{ page.footer }}
+        </footer>
+    {% endblock %}
+
 </div>
+<style>
+
+.bubble-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.hibiscus > *:not(.bubble-layer) {
+    position: relative;
+    z-index: 10;
+}
+
+.bubble {
+    pointer-events: none;
+    position: absolute;
+    bottom: -150px;
+    border-radius: 50%;
+    animation: rise 14s infinite linear;
+    filter: blur(2px);          
+    transform: translateZ(0);
+}
+
+
+.bubble:nth-child(1)  { width:70px;  height:70px;  left:10%; animation-delay:0s;  background: rgba(224, 26,  79,  0.22); } 
+.bubble:nth-child(2)  { width:100px; height:100px; left:25%; animation-delay:2s;  background: rgba(249, 194, 46,  0.22); } 
+.bubble:nth-child(3)  { width:85px;  height:85px;  left:40%; animation-delay:4s;  background: rgba(83,  179, 203, 0.32); } 
+.bubble:nth-child(4)  { width:120px; height:120px; left:55%; animation-delay:1s;  background: rgba(241, 89,  70,  0.22); } 
+.bubble:nth-child(5)  { width:60px;  height:60px;  left:70%; animation-delay:3s;  background: rgba(174, 144, 195, 0.22); } 
+.bubble:nth-child(6)  { width:140px; height:140px; left:85%; animation-delay:5s;  background: rgba(246, 176, 189, 0.22); } 
+.bubble:nth-child(7)  { width:50px;  height:50px;  left:35%; animation-delay:6s;  background: rgba(224, 26,  79,  0.32); } 
+.bubble:nth-child(8)  { width:150px; height:150px; left:60%; animation-delay:7s;  background: rgba(83,  179, 203, 0.22); } 
+.bubble:nth-child(9)  { width:90px;  height:90px;  left:15%; animation-delay:8s;  background: rgba(249, 194, 46,  0.22); } 
+.bubble:nth-child(10) { width:110px; height:110px; left:90%; animation-delay:9s;  background: rgba(174, 144, 195, 0.32); } 
+.bubble:nth-child(11)  { width:120px; height:120px; left:29%; animation-delay:2s;  background: rgba(174, 144, 195, 0.32); }
+
+@keyframes rise {
+    0%   { transform: translateY(0);      opacity: 0.9; }
+    100% { transform: translateY(-110vh); opacity: 0;   }
+}
+</style>
